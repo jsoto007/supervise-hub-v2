@@ -8,9 +8,9 @@ class UsersController < ApplicationController
     render json: user
   end 
 
-  def show
-    user = find_user
-    render json: user
+  def show 
+    current_user = find_user
+    render json: current_user 
   end 
 
   private
