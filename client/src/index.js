@@ -1,15 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client'
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import { UserContextProvider } from './context/UserContextProvider';
 
-ReactDOM.render(
-  <React.StrictMode>
+const container = document.getElementById("root")
+
+const root = createRoot(container)
+
+root.render(
+  <UserContextProvider>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  </UserContextProvider>
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
