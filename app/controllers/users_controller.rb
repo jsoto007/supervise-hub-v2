@@ -13,6 +13,11 @@ class UsersController < ApplicationController
     render json: current_user 
   end 
 
+  def index
+    current_user = find_user
+    render json: current_user
+  end
+
   private
 
   def user_params
