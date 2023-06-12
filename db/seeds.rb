@@ -1,4 +1,3 @@
-
 puts "🌱🌱🌱🪴🪴🪴 Seeding spices..."
 
 User.destroy_all
@@ -45,4 +44,4 @@ end
   )
 end 
 
-puts "🌳🌳🌳✅ Done seeding~!"
+puts "🌳🌳🌳 ✅ Done seeding~!"
