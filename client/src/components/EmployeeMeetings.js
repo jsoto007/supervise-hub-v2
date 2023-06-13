@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
 
+import NotesCard from "./NotesCard";
+
+
 function EmployeeMeetings() {
 
   const [staffMeetings, setStaffMeetings] = useState([]);
@@ -25,6 +28,7 @@ return (
             <li>{meetingInfo.scheduled_date}</li>
             <li>{meetingInfo.title}</li>
           </ul>
+         <NotesCard  notesData={ meetingInfo}/>
         </div>
       )
     })}
