@@ -16,13 +16,20 @@ function EmployeeMeetings() {
     })
   }, [id])
 
+
 return (
   <div>
     {staffMeetings.map((meetingInfo) => {
       return (
-        <ul key={meetingInfo.id}>
-          <li>{meetingInfo.title}</li>
-        </ul>
+        <div key={meetingInfo.id}>
+          {meetingInfo ? (
+            <ul>
+            <li>{meetingInfo.scheduled_date}</li>
+            <li>{meetingInfo.title}</li>
+            </ul>
+          ) : (<h3>No meetings yet</h3>)
+        }
+        </div>
       )
     })}
 

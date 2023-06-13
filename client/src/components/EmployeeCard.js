@@ -2,9 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom"
 import EmployeeMeetings from "./EmployeeMeetings";
 
-function EmployeeCard( { employee } ) {
+function EmployeeCard( { employeeInfo } ) {
 
-  const {name, id} = employee
+  const {name, id} = employeeInfo
 
   return (
       <div key={id}>

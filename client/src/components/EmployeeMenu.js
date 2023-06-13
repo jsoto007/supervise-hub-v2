@@ -6,7 +6,7 @@ function EmployeeMenu() {
   const [employees, setEmployees] = useState([])
 
   useEffect(() => {
-    fetch(`/employees`)
+    fetch(`/completed-meetings`)
     .then((resp) => {
       if (resp.ok) {
         resp.json().then((employeeList) => setEmployees(employeeList))
@@ -14,11 +14,14 @@ function EmployeeMenu() {
     })
   }, [])
 
+  console.log(employees)
+
   return (
     <div>
       {employees.map((emp)=> {
+        {console.log("inside map:", emp.employee.name)}
         return (
-          <EmployeeCard  employee={emp} key={emp.id}/>
+          <EmployeeCard  employeeInfo={emp.employee} key={emp.id}/>
         )
       })}
     </div>
