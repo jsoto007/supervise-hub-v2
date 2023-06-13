@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
   skip_before_action :authorized, only: :create
 
+  rescue_from ActiveRecord::RecordInvalid, with: :render_record_invalid
+
   def create
     user = User.create!(user_params)
     session[:user_id] = user.id
@@ -27,6 +29,10 @@ class UsersController < ApplicationController
 
   def find_user
     User.find_by(id: session[:user_id])
+  end 
+
+  def render_record_invalid(e)
+    render json: { errors: e.record.errors.full_messages }, status: :unprocessable_entity
   end 
 
 

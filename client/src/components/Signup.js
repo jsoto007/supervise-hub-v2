@@ -6,6 +6,8 @@ function Signup() {
 
   const {setCurrentUser} = useContext(UserContext)
 
+  const [errors, setErrors] = useState([])
+
   const [signupData, setSignupData] = useState({
     username: "", 
     password: "",
@@ -25,6 +27,8 @@ function Signup() {
     const data = await response.json();
     if(response.ok) {
       setCurrentUser(data)
+    } else {
+      setErrors(data.errors)
     }
   }
 
@@ -36,6 +40,7 @@ function Signup() {
       })
   }
 
+  console.log(errors)
   return (
     <div>
       <form onSubmit={handleSignup}>
@@ -63,6 +68,15 @@ function Signup() {
           onChange={handleChange}
           placeholder="Email"
         />
+
+        {errors.length > 0 && (
+          <ul className='error-messages'>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+        )}
+
         <button type="submit"> Create Account </button>
       </form>
     </div>

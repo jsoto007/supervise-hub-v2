@@ -30,8 +30,6 @@ function Login() {
     }
   }
 
-  console.log(errors)
-
   function handleChange(e) {
     const key = e.target.id
     setLoginData({
