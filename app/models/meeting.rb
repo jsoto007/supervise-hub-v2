@@ -7,6 +7,8 @@ class Meeting < ApplicationRecord
     self.employee.name
   end 
 
+
+  # Might not need the ID for supervision page / Review to delete
   def staff_id
     self.employee.id
   end 
