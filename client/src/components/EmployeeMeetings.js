@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
 
-function EmployeeMeetings( {id} ) {
+function EmployeeMeetings() {
 
   const [staffMeetings, setStaffMeetings] = useState([]);
 
-  const routeParams = useParams();
-
-  console.log(routeParams)
+  const { id } = useParams();
   
   useEffect(() => {
     fetch(`/employees/${id}`)
@@ -18,10 +16,15 @@ function EmployeeMeetings( {id} ) {
     })
   }, [id])
 
-  console.log(staffMeetings)
-
 return (
   <div>
+    {staffMeetings.map((meetingInfo) => {
+      return (
+        <ul key={meetingInfo.id}>
+          <li>{meetingInfo.title}</li>
+        </ul>
+      )
+    })}
 
   </div>
 )

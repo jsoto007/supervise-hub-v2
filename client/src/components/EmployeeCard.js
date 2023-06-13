@@ -7,16 +7,14 @@ function EmployeeCard( { employee } ) {
   const {name, id} = employee
 
   return (
-    <div>
       <div key={id}>
         <NavLink 
           id="details"
-          to={`/employees/${id}`}
+          to={`/supervisions/${id}`}
         >
         <button>{name}</button>
         </NavLink>
       </div>
-    </div>
   )
 }
 

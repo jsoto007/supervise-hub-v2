@@ -31,6 +31,11 @@ function App() {
           <EmployeeMenu />
           <EmployeeMeetings />
         </Route>
+        <Route exact path="/supervisions/:id">
+          <h3>Supervisions</h3>
+          <EmployeeMenu />
+          <EmployeeMeetings />
+        </Route>
       </Switch>
     </div>
   );

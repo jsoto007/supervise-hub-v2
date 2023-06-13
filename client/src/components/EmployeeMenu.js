@@ -18,7 +18,7 @@ function EmployeeMenu() {
     <div>
       {employees.map((emp)=> {
         return (
-          <EmployeeCard  employee={emp} />
+          <EmployeeCard  employee={emp} key={emp.id}/>
         )
       })}
     </div>
