@@ -16,7 +16,6 @@ function EmployeeMeetings() {
     })
   }, [id])
 
-
 return (
   <div>
     {staffMeetings.map((meetingInfo) => {
