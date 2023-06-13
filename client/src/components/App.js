@@ -4,15 +4,12 @@ import { Route, Switch } from "react-router-dom"
 import '../App.css';
 import Auth from "./Auth";
 import NavBar from "./NavBar";
-
-import { DataContext } from "../context/DataContextProvider";
+import Meetings from "./Meetings";
 
 
 function App() {
 
   const {currentUser}  = useContext(UserContext);
-
-  const {meetingData}  = useContext(DataContext);
 
   if (!currentUser.id) return <Auth />
 
@@ -25,6 +22,7 @@ function App() {
       <Switch>
         <Route exact path="/">
            <h3>Home</h3>
+           <Meetings />
         </Route>
         <Route exact path="/supervisions">
           <h3>Supervisions</h3>

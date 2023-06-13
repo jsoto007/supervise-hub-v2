@@ -3,9 +3,12 @@ class Meeting < ApplicationRecord
   belongs_to :employee
   has_many :notes
 
-  #considering delete/ not using now. 
   def staff_name
     self.employee.name
+  end 
+
+  def meeting_notes
+    self.notes
   end 
   
 end
