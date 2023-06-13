@@ -22,13 +22,10 @@ return (
     {staffMeetings.map((meetingInfo) => {
       return (
         <div key={meetingInfo.id}>
-          {meetingInfo ? (
-            <ul>
+          <ul>
             <li>{meetingInfo.scheduled_date}</li>
             <li>{meetingInfo.title}</li>
-            </ul>
-          ) : (<h3>No meetings yet</h3>)
-        }
+          </ul>
         </div>
       )
     })}

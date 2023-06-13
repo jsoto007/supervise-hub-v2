@@ -14,12 +14,9 @@ function EmployeeMenu() {
     })
   }, [])
 
-  console.log(employees)
-
   return (
     <div>
       {employees.map((emp)=> {
-        {console.log("inside map:", emp.employee.name)}
         return (
           <EmployeeCard  employeeInfo={emp.employee} key={emp.id}/>
         )
