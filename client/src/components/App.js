@@ -5,14 +5,16 @@ import '../App.css';
 import Auth from "./Auth";
 import NavBar from "./NavBar";
 
+import { DataContext } from "../context/DataContextProvider";
 
 
 function App() {
 
   const {currentUser}  = useContext(UserContext);
 
-  if (!currentUser.id) return <Auth />
+  const {meetingData}  = useContext(DataContext);
 
+  if (!currentUser.id) return <Auth />
 
   return (
     <div className="App">
