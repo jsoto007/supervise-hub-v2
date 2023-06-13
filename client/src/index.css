@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.error-messages {
+  list-style-type: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: red;
+}

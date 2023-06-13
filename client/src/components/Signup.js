@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { UserContext } from "../context/UserContextProvider";
+
 
 function Signup() {
+
+  const {setCurrentUser} = useContext(UserContext)
 
   const [signupData, setSignupData] = useState({
     username: "", 
@@ -20,7 +24,7 @@ function Signup() {
     });
     const data = await response.json();
     if(response.ok) {
-      console.log(data)
+      setCurrentUser(data)
     }
   }
 

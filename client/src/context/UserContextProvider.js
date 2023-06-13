@@ -20,14 +20,14 @@ function UserContextProvider( { children } ) {
     fetch("/logout", {
       method: 'DELETE', 
     })
-    .then(()=> setCurrentUser({
-      expenses: []
-    }))
+    .then(()=> setCurrentUser({}))
   }
 
 return (
   <UserContext.Provider value={{
-    currentUser
+    currentUser,
+    setCurrentUser, 
+    handleLogout
   }}>
       { children }
   </UserContext.Provider>

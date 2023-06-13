@@ -4,6 +4,7 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import { UserContextProvider } from './context/UserContextProvider';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const container = document.getElementById("root")
 
@@ -11,7 +12,9 @@ const root = createRoot(container)
 
 root.render(
   <UserContextProvider>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </UserContextProvider>
 )
 

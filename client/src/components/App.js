@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../context/UserContextProvider";
+import { Route, Switch } from "react-router-dom"
 import '../App.css';
 import Auth from "./Auth";
-import Login from './Login';
-import Signup from './Signup';
+import NavBar from "./NavBar";
+
 
 
 function App() {
@@ -11,11 +12,22 @@ function App() {
   const {currentUser}  = useContext(UserContext);
 
   if (!currentUser.id) return <Auth />
-console.log(currentUser)
+
 
   return (
     <div className="App">
+      
       <h1>Welcome {currentUser.username}</h1>
+      <NavBar />
+
+      <Switch>
+        <Route exact path="/">
+           <h3>Home</h3>
+        </Route>
+        <Route exact path="/supervisions">
+          <h3>Supervisions</h3>
+        </Route>
+      </Switch>
     </div>
   );
 }

@@ -1,6 +1,12 @@
-import react, { useState } from "react";
+import react, { useState, useContext } from "react";
+import { UserContext } from "../context/UserContextProvider";
 
 function Login() {
+
+
+  const {setCurrentUser} = useContext(UserContext)
+
+  const [errors, setErrors] = useState([])
 
   const [loginData, setLoginData] = useState({
     username: "", 
@@ -18,9 +24,13 @@ function Login() {
     });
     const data = await response.json();
     if(response.ok){
-      console.log(data)
+      setCurrentUser(data)
+    } else {
+      setErrors(data.error)
     }
   }
+
+  console.log(errors)
 
   function handleChange(e) {
     const key = e.target.id
@@ -50,6 +60,13 @@ function Login() {
         placeholder="Password"
       />
       <button type="submit">Log In</button>
+        {errors ? (
+          <ul className='error-messages' key={errors.login}>
+          <li>{errors.login}</li>
+          </ul>
+          ): 
+          null
+        }
       </form>
     </div>
   )
