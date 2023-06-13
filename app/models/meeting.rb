@@ -7,8 +7,8 @@ class Meeting < ApplicationRecord
     self.employee.name
   end 
 
-  def meeting_notes
-    self.notes
+  def staff_id
+    self.employee.id
   end 
   
 end
