@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :users, only:[:show, :create, :index]
-
+  resources :meetings, only:[:index]
+  
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   get "/auth", to: "users#show"
