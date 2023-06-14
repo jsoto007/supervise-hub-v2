@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import StaffDropDownMenu from "./StaffDropDowmMenu";
 
 
 function NewMeetingForm() {
 
-  const [formData, setFormData] = useState([])
+  const [staffInfo, setStaffInfo] = useState([])
 
-
-  // t.integer "user_id"
-  // t.integer "employee_id"
-  // t.string "title"
-  // t.boolean "completed"
-  // t.datetime "scheduled_date"
+  const [formData, setFormData] = useState({
+    title: "First TEST", 
+    completed: false, 
+    scheduled_date: "2023-12-12", 
+    employee_id: "136"
+  })
 
   async function handleSubmit(e) {
 
@@ -31,6 +32,9 @@ function NewMeetingForm() {
 
   return (
     <div>
+      <form onSubmit={handleSubmit}>
+        <button type="sumit">Add Meeting</button>
+      </form>
 
 
     </div>

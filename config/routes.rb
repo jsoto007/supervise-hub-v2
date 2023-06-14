@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :users, only:[:show, :create, :index]
-  resources :meetings, only:[:index]
+  resources :meetings, only:[:index, :create]
   resources :notes, only:[:create]
   resources :employees, only:[:show, :index]
 
