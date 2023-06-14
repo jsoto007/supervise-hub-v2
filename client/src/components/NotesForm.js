@@ -16,7 +16,19 @@ function NotesForm() {
     note3: ""
   });
 
-  function handleSubmit() {
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    const response = await fetch(`/notes`, {
+      method: "POST", 
+      headers: {'Content-Type': 'application/json'},
+      body:JSON.stringify(formData)
+    })
+
+    const data = await response.json();
+      if (response.ok) {
+        console.log(data)
+      }
 
   }
 

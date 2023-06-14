@@ -11,16 +11,16 @@ function MeetingCard() {
       {meetingData.map((meeting) => {
         return (
           <div key={meeting.id}>
-          <ul>
-            <li>{meeting.title}</li>
-            <li>{meeting.staff_name}  | {meeting.scheduled_date}</li>
-          </ul>
-          <NavLink 
-          id="details"
-          to={`/meetings/${meeting.id}/notes`}
-           >
-          <button>Add Notes to Meeting</button>
-         </NavLink>
+            <ul>
+              <li>{meeting.title}</li>
+              <li>{meeting.staff_name}  | {meeting.scheduled_date}</li>
+            </ul>
+            <NavLink 
+              id="details"
+              to={`/meetings/${meeting.id}/notes`}
+            >
+            <button>Add Notes to Meeting</button>
+            </NavLink>
           </div>
         )
       })}

@@ -7,8 +7,6 @@ function NotesCard( { notesData } ) {
 
   const { title, scheduled_date, staff_name, notes} = notesData
 
-  console.log(notesData)
-
   return (
     <Popup
     trigger={<button className="button"> Meetings Notes </button>}
