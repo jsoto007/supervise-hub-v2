@@ -30,9 +30,28 @@ function NewMeetingForm() {
 
   }
 
+
+  // title: "First TEST", 
+  //   completed: false, 
+  //   scheduled_date: "2023-12-12", 
+  //   employee_id: "136"
+  function handleChange() {
+
+  }
+
   return (
     <div>
+      <StaffDropDownMenu />
       <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="title"
+          value={staffInfo.title}
+          id="title"
+          onChange={handleChange}
+          placeholder="title"
+          
+          ></input>
         <button type="sumit">Add Meeting</button>
       </form>
 
