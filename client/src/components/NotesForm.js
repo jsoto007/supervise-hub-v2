@@ -5,7 +5,7 @@ import { DataContext } from "../context/DataContextProvider";
 
 function NotesForm() {
 
-  const { setMeetingData} = useContext(DataContext)
+  const { meetingData, setMeetingData} = useContext(DataContext)
 
   const {id} = useParams();
   const history = useHistory();
@@ -20,8 +20,21 @@ function NotesForm() {
     note3: ""
   });
 
-  function handleAddNotesToMeeting(data) {
-    
+  function handleAddNotesToMeeting(newNotes) {
+    const updatedMeetings = meetingData.map((meeting) => {
+      if (meeting.id === newNotes.meeting_id) {
+        
+        meeting.completed = true;
+        
+        return {
+          ...meeting, 
+          notes: [newNotes, ...meeting.notes]
+        }
+      } else {
+        return meeting
+      }
+    })
+    setMeetingData(updatedMeetings);
   }
 
   async function handleSubmit(e) {
@@ -33,12 +46,11 @@ function NotesForm() {
       body:JSON.stringify(formData)
     })
 
-    const data = await response.json();
+    const newNotes = await response.json();
       if (response.ok) {
-        console.log(data)
+        handleAddNotesToMeeting(newNotes)
 
       }
-
       history.push(`/user/meetings`)
 
   }
