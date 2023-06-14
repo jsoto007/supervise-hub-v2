@@ -53,7 +53,6 @@ function NotesCard( { notesData } ) {
           <button
             className="button"
             onClick={() => {
-              console.log('modal closed ');
               close();
             }}
           >
