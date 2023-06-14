@@ -1,12 +1,15 @@
-import React, { useState} from "react";
+import React, { useContext, useState} from "react";
 import { useParams } from "react-router-dom"
 import { useHistory } from "react-router-dom"
+import { DataContext } from "../context/DataContextProvider";
 
 function NotesForm() {
 
+  const { setMeetingData} = useContext(DataContext)
+
   const {id} = useParams();
   const history = useHistory();
-  
+
   const [formData, setFormData] = useState({
     meeting_id: `${id}`, 
     criteria1: "",
@@ -16,6 +19,10 @@ function NotesForm() {
     criteria3: "", 
     note3: ""
   });
+
+  function handleSetData(data) {
+    
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();

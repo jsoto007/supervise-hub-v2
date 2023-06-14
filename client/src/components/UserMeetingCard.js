@@ -14,10 +14,13 @@ function UserMeetingCard() {
         return (
           <div key={meeting.id}>
             <ul>
+              {meeting.completed ? (<span id="check-mark">✓</span>) :  null}
               <li><b>{meeting.staff_name}</b>  | {meeting.scheduled_date}</li>
               <li><b>{meeting.title}</b></li>
             </ul>
-            <NotesCard notesData={meeting}/>
+            {meeting.notes.length > 0 ? 
+            (<NotesCard notesData={meeting}/>) : 
+            (<li>There are no notes available for this meeting</li>)}
           </div>
         )
       })}
