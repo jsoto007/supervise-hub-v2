@@ -20,7 +20,7 @@ function NotesForm() {
     note3: ""
   });
 
-  function handleSetData(data) {
+  function handleAddNotesToMeeting(data) {
     
   }
 
