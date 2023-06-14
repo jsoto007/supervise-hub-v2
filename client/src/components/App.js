@@ -11,7 +11,6 @@ import UserMeetings from "./UserMeetings";
 import EmployeeMeetings from "./EmployeeMeetings";
 
 
-
 function App() {
 
   const {currentUser}  = useContext(UserContext);

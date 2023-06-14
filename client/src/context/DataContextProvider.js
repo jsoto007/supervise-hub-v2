@@ -3,7 +3,9 @@ import React, { useState, useEffect} from "react";
 const DataContext = React.createContext();
 
 function DataContextProvider( { children } ) {
+
   const [meetingData, setMeetingData] = useState([])
+  const [employeeData, setEmployeeData] = useState([])
 
 
   useEffect(() => {
@@ -15,10 +17,20 @@ function DataContextProvider( { children } ) {
     })
   }, [])
 
+  useEffect(() => {
+    fetch(`/employees`)
+    .then((resp) => {
+      if (resp.ok) {
+        resp.json().then((employees) => setEmployeeData(employees))
+      }
+    })
+  }, [])
+
   return (
     <DataContext.Provider value={{
       meetingData, 
-      setMeetingData
+      setMeetingData,
+      employeeData
     }}>
       {children}
     </DataContext.Provider>

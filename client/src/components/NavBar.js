@@ -34,6 +34,13 @@ function NavBar() {
         >
           <button>My Meetings</button>
         </NavLink>
+        <NavLink
+        className="nav-link"
+        to="/user/meetings/create"
+        exact
+        >
+          <button>Schedule Meeting</button>
+        </NavLink>
       </nav>
     </div>
   )

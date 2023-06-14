@@ -3,7 +3,6 @@ import MeetingCard from "./MeetingCard";
 
 function Meetings() {
 
-
   return (
     <div>
       <h3>Upcoming Supervisions</h3>
