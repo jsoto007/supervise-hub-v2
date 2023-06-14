@@ -10,9 +10,8 @@ function MeetingCard() {
     <div className="meetings_schedule">
       {meetingData.map((meeting) => {
         return (
-          <div>
-            {console.log(meeting)}
-          <ul key={meeting.id}>
+          <div key={meeting.id}>
+          <ul>
             <li>{meeting.title}</li>
             <li>{meeting.staff_name}  | {meeting.scheduled_date}</li>
           </ul>

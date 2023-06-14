@@ -1,17 +1,19 @@
 import React, { useState} from "react";
+import { useParams } from "react-router-dom"
 
 
 function NotesForm() {
 
+  const {id} = useParams();
+
   const [formData, setFormData] = useState({
-    meeting_id: "", 
+    meeting_id: `${id}`, 
     criteria1: "",
     note1: "",
     criteria2: "",
     note2: "", 
     criteria3: "", 
     note3: ""
-
   });
 
   function handleSubmit() {
