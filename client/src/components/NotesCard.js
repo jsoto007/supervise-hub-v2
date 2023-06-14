@@ -11,7 +11,7 @@ function NotesCard( { notesData } ) {
 
   return (
     <Popup
-    trigger={<button className="button"> Open Modal </button>}
+    trigger={<button className="button"> Meetings Notes </button>}
     modal
     nested
   >
@@ -22,6 +22,7 @@ function NotesCard( { notesData } ) {
         </button>
         <h3>Completed Supervision</h3>
         <h2>{staff_name}</h2>
+        <h5>{title}</h5>
         <h5>{scheduled_date}</h5>
         <div className="content">
 

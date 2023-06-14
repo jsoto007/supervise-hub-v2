@@ -6,8 +6,10 @@ import Auth from "./Auth";
 import NavBar from "./NavBar";
 import Meetings from "./Meetings";
 import EmployeeMenu from "./EmployeeMenu";
+import NotesForm from "./NotesForm";
 
 import EmployeeMeetings from "./EmployeeMeetings";
+
 
 
 function App() {
@@ -27,14 +29,17 @@ function App() {
            <Meetings />
         </Route>
         <Route exact path="/supervisions">
-          <h3>Supervisions</h3>
+          <h3>Staff with Completed Supervisions</h3>
           <EmployeeMenu />
           <EmployeeMeetings />
         </Route>
         <Route exact path="/supervisions/:id">
-          <h3>Supervisions</h3>
+          <h3>Staff with Completed Supervisions</h3>
           <EmployeeMenu />
           <EmployeeMeetings />
+        </Route>
+        <Route exact path="/meetings/:id/notes">
+          <NotesForm />
         </Route>
       </Switch>
     </div>
