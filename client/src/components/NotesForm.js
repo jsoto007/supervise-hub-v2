@@ -1,11 +1,12 @@
 import React, { useState} from "react";
 import { useParams } from "react-router-dom"
-
+import { useHistory } from "react-router-dom"
 
 function NotesForm() {
 
   const {id} = useParams();
-
+  const history = useHistory();
+  
   const [formData, setFormData] = useState({
     meeting_id: `${id}`, 
     criteria1: "",
@@ -28,7 +29,10 @@ function NotesForm() {
     const data = await response.json();
       if (response.ok) {
         console.log(data)
+
       }
+
+      history.push(`/user/meetings`)
 
   }
 

@@ -8,7 +8,7 @@ import { UserContext } from "../context/UserContextProvider";
 function NavBar() {
 
   const {handleLogout} = useContext(UserContext)
-  
+
   return (
     <div>
       <button id="logout-btn" onClick={handleLogout}>Logout</button>
@@ -26,6 +26,13 @@ function NavBar() {
         exact
         >
           <button>Supervisions</button>
+        </NavLink>
+        <NavLink
+        className="nav-link"
+        to="/user/meetings"
+        exact
+        >
+          <button>My Meetings</button>
         </NavLink>
       </nav>
     </div>

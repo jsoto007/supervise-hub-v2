@@ -7,7 +7,7 @@ import NavBar from "./NavBar";
 import Meetings from "./Meetings";
 import EmployeeMenu from "./EmployeeMenu";
 import NotesForm from "./NotesForm";
-
+import UserMeetings from "./UserMeetings";
 import EmployeeMeetings from "./EmployeeMeetings";
 
 
@@ -41,6 +41,10 @@ function App() {
         <Route exact path="/meetings/:id/notes">
           <NotesForm />
         </Route>
+        <Route exact path="/user/meetings">
+          <UserMeetings />
+        </Route>
+
       </Switch>
     </div>
   );

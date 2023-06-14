@@ -10,4 +10,5 @@ class MeetingsController < ApplicationController
     meetings = Meeting.all.where("completed = true")
     render json: meetings
   end 
+  
 end

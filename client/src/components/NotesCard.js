@@ -57,7 +57,7 @@ function NotesCard( { notesData } ) {
               close();
             }}
           >
-            close modal
+            close notes
           </button>
         </div>
       </div>
