@@ -1,7 +1,7 @@
 class Meeting < ApplicationRecord
   belongs_to :user
   belongs_to :employee
-  has_many :notes
+  has_many :notes, dependent: :destroy
 
   def staff_name
     self.employee.name

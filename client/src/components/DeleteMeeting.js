@@ -10,7 +10,7 @@ function DeleteMeeting( { meeting } ) {
     })
     .then(handleDeleteUpdate(meeting))
   }
-
+  
   function handleDeleteUpdate() {
 
   }

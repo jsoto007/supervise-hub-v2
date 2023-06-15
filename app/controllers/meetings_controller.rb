@@ -22,7 +22,8 @@ class MeetingsController < ApplicationController
   end 
 
   def destroy
-
+    meeting = Meeting.find_by(id: params[:id])
+    meeting.destroy
   end
 
 
