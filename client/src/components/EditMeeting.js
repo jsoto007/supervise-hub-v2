@@ -6,7 +6,9 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
   const {meetingData, setMeetingData} = useContext(DataContext)
 
   const { id, title, scheduled_date, staff_name} = meeting;
-
+  
+  const [errors, setErrors] = useState([])
+  
   const [patchedMeeting, setPatchedMeeting] = useState({
     title: `${title}`,
     scheduled_date: `${scheduled_date}`
@@ -32,7 +34,9 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
     const data = await response.json();
       if(response.ok){
         handleEditMeeting(data)
-      } 
+      }else {
+        setErrors(data)
+      }
 
       setToggleEdit((toggleEdit) => !toggleEdit)
   }
@@ -45,6 +49,8 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
       [key]: e.target.value
     })
   }
+
+  console.log(errors)
 
   return (
     <div>
@@ -66,6 +72,13 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
           id="scheduled_date"
           onChange={handleChange}
         />
+         {errors.length > 0 && (
+          <ul className='error-messages'>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+         )}
       <button type="submit">Submit</button>
       </form>
 

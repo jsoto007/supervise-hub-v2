@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import StaffDropDownMenu from "./StaffDropDowmMenu";
 import { DataContext } from "../context/DataContextProvider";
 import DateTimePicker from "react-datetime-picker";
+import { useHistory } from "react-router-dom";
 
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
@@ -12,6 +13,10 @@ function NewMeetingForm() {
   const {meetingData, setMeetingData} = useContext(DataContext)
 
   const [dateTime, setDateTime] = useState(new Date());
+
+  const [respErrors, setRespErrors] = useState([])
+
+  const history = useHistory();
 
   const [formData, setFormData] = useState({
     title: "", 
@@ -33,12 +38,17 @@ function NewMeetingForm() {
     const newMeeting = await response.json();
     if (response.ok) {
       handleAddMeeting(newMeeting)
+      history.push("/")
+    }else {
+      console.log("resp", newMeeting.error)
     }
 
   }
 
   function handleAddMeeting(newMeeting) {
     setMeetingData([newMeeting, ...meetingData])
+
+
   }
 
 
@@ -49,8 +59,6 @@ function NewMeetingForm() {
       [key]: e.target.value
     })
   }
-
- console.log(dateTime)
 
   return (
     <div>

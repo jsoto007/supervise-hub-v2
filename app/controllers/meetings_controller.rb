@@ -1,5 +1,7 @@
 class MeetingsController < ApplicationController
 
+  rescue_from ActiveRecord::RecordInvalid, with: :render_record_invalid
+
   def index
     user = find_user
     all_meetings = user.meetings.all
@@ -23,8 +25,8 @@ class MeetingsController < ApplicationController
       title: params[:title],
       scheduled_date: params[:scheduled_date]
     )
-
     render json: meeting, status: :accepted
+    
   end 
 
   def destroy
@@ -42,6 +44,10 @@ class MeetingsController < ApplicationController
 
   def meeting_params
     params.permit(:title, :completed, :scheduled_date, :employee_id)
+  end 
+
+  def render_record_invalid(e)
+    render json: { errors: e.record.errors.full_messages }, status: :unprocessable_entity
   end 
 
 end
