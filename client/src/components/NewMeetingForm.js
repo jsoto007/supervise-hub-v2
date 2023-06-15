@@ -4,15 +4,11 @@ import StaffDropDownMenu from "./StaffDropDowmMenu";
 
 function NewMeetingForm() {
 
-  const [staffInfo, setStaffInfo] = useState([])
-
-  // console.log(staffInfo.id, `this is the interpolation ${formData.employee_id}`)
-
   const [formData, setFormData] = useState({
-    title: "First TEST", 
+    title: "", 
     completed: false, 
     employee_id: "",
-    scheduled_date: "2023-12-12" 
+    scheduled_date: "" 
     
   })
 
@@ -34,12 +30,12 @@ function NewMeetingForm() {
   }
 
 
-  // title: "First TEST", 
-  //   completed: false, 
-  //   scheduled_date: "2023-12-12", 
-  //   employee_id: "136"
-  function handleChange() {
-
+  function handleChange(e) {
+    const key = e.target.id
+    setFormData({
+      ...formData,
+      [key]: e.target.value
+    })
   }
 
   return (
@@ -49,7 +45,7 @@ function NewMeetingForm() {
         <input
           type="text"
           name="title"
-          value={staffInfo.title}
+          value={formData.title}
           id="title"
           onChange={handleChange}
           placeholder="title"
@@ -57,7 +53,7 @@ function NewMeetingForm() {
         <input
           type="text"
           name="scheduled_date"
-          value={staffInfo.scheduled_date}
+          value={formData.scheduled_date}
           id="scheduled_date"
           onChange={handleChange}
           placeholder="scheduled_date"
