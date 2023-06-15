@@ -5,7 +5,6 @@ import NotesCard from "./NotesCard";
 
 function UserMeetingCard() {
 
-
   const {meetingData} = useContext(DataContext)
 
   return (
