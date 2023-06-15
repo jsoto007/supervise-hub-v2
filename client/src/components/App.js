@@ -10,6 +10,7 @@ import NotesForm from "./NotesForm";
 import UserMeetings from "./UserMeetings";
 import EmployeeMeetings from "./EmployeeMeetings";
 import NewMeetingForm from "./NewMeetingForm";
+import CompletedMeetingsContainer from "./CompletedMeetingsContainer";
 
 
 function App() {
@@ -29,14 +30,11 @@ function App() {
            <Meetings />
         </Route>
         <Route exact path="/supervisions">
-          <h3>Staff with Completed Supervisions</h3>
           <EmployeeMenu />
-          <EmployeeMeetings />
+
         </Route>
         <Route exact path="/supervisions/:id">
-          <h3>Staff with Completed Supervisions</h3>
-          <EmployeeMenu />
-          <EmployeeMeetings />
+          <CompletedMeetingsContainer />
         </Route>
         <Route exact path="/meetings/:id/notes">
           <NotesForm />

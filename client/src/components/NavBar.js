@@ -18,28 +18,28 @@ function NavBar() {
           to="/"
           exact
         >
-          <button>Home</button>
+          Home
         </NavLink>
         <NavLink
         className="nav-link"
         to="/supervisions"
         exact
         >
-          <button>Supervisions</button>
+          Supervisions
         </NavLink>
         <NavLink
         className="nav-link"
         to="/user/meetings"
         exact
         >
-          <button>My Meetings</button>
+          My Meetings
         </NavLink>
         <NavLink
         className="nav-link"
         to="/user/meetings/create"
         exact
         >
-          <button>Schedule Meeting</button>
+          Schedule Meeting
         </NavLink>
       </nav>
     </div>

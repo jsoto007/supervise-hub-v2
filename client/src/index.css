@@ -78,6 +78,24 @@ code {
 
 }
 
+.menu-container {
+   float: left;
+   width: 35%;
+   background-color: #FDFDFD;
+   margin-top: 15px;
+   margin-left: 10px;
+   border-radius: 22px;
+}
+
+.meetings-container {
+  float: right;
+  width: 60%;
+  background-color: #FDFDFD;
+  margin-right: 44px;
+  border-radius: 35px;
+  margin-top: 15px;
+}
+
 .login-btn {
   font-size:x-large;
   justify-content: center;
@@ -152,6 +170,21 @@ code {
   margin-top: 15%;
   border-radius: 10%;
   margin-left: 10%;
+}
+
+nav a.active {
+  height: 50 vh;
+  min-height: 400px;
+  color: black;
+  border-radius: 12px;
+  background-color: #EFEFEF;
+  padding-left: 6px;
+  padding-right: 6px;
+  text-decoration: none;
+}
+
+nav {
+  color: black;
 }
 
 
