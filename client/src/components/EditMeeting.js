@@ -2,13 +2,11 @@ import React, { useState, useContext } from "react";
 
 function EditMeeting( { meeting } ) {
 
-  const { id, title, scheduled_date} = meeting;
+  const { id, title, scheduled_date, staff_name} = meeting;
 
   const [patchedMeeting, setPatchedMeeting] = useState({
-    // title: `${title}`,
-    // scheduled_date: `${scheduled_date}`
-    title: `THE NEW TITLE`,
-    scheduled_date: `2024-2-2`
+    title: `${title}`,
+    scheduled_date: `${scheduled_date}`
   })
 
   async function handlePatchSubmit(e) {
@@ -28,22 +26,6 @@ function EditMeeting( { meeting } ) {
       } 
 
   }
-  // async function handleSubmit(e) {
-  //   e.preventDefault();
-  //   const response = await fetch('/login', {
-  //     method: "POST", 
-  //     headers: {
-  //       'Content-type': 'application/json'
-  //     },
-  //     body:JSON.stringify(loginData)
-  //   });
-  //   const data = await response.json();
-  //   if(response.ok){
-  //     setCurrentUser(data)
-  //   } else {
-  //     setErrors(data.error)
-  //   }
-  // }
 
   function handlePatchedCategory(editedMeeting) {
 
@@ -61,7 +43,22 @@ function EditMeeting( { meeting } ) {
     <div>
 
       <form onSubmit={handlePatchSubmit}>
-
+        <input
+          type="text"
+          name="title"
+          value={patchedMeeting.title}
+          id="title"
+          onChange={handleChange}
+        />
+        <br />
+        <label for="scheduled_date">{staff_name} | </label>
+        <input
+          type="text"
+          name="scheduled_date"
+          value={patchedMeeting.scheduled_date}
+          id="scheduled_date"
+          onChange={handleChange}
+        />
       <button type="submit">Submit</button>
       </form>
 
