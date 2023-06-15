@@ -97,6 +97,13 @@ code {
     background-color: #D0E3CD;
 }
 
+#check-mark {
+  display: flex;
+  position:relative;
+  margin-right: 937px;
+  background-color: #4B6B79;
+}
+
 .employee-menu-container {
   margin-top: 15px;
   background-color: #FDFDFD;
