@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { DataContext } from "../context/DataContextProvider";
 import { NavLink } from "react-router-dom"
+import DeleteMeeting from "./DeleteMeeting";
 
 function MeetingCard() {
 
@@ -19,6 +20,8 @@ function MeetingCard() {
               id="details"
               to={`/meetings/${meeting.id}/notes`}
             >
+            <DeleteMeeting meeting={meeting} />
+            <br />
             <button>Add Notes to Meeting</button>
             </NavLink>
           </div>

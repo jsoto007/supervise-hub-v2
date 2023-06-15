@@ -17,6 +17,16 @@ class MeetingsController < ApplicationController
     render json: meetings
   end 
 
+  def update
+
+  end 
+
+  def destroy
+
+  end
+
+
+
   private
 
   def find_user
