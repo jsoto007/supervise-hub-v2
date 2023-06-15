@@ -96,6 +96,14 @@ code {
   margin-top: 15px;
 }
 
+.employee-meetings{
+  background-color: #47556929;
+  margin-bottom: 15px;
+  margin-left: 8%;
+  margin-right: 8%;
+  border-radius: 23px;
+}
+
 .login-btn {
   font-size:x-large;
   justify-content: center;
@@ -139,7 +147,7 @@ code {
   font-size: 17px;
   padding: 2px 6px;
   width: 430px;
-  background-color: #D0E3CD;
+  background-color: #BED2C4;
   margin-bottom: 27px;
   margin-left: 10px;
   margin-right: 10px;
@@ -186,6 +194,33 @@ code {
   border-radius: 10px;
 }
 
+.new-meeting-form{
+  float: right;
+  background-color: #FDFDFD;
+  border-radius: 26px;
+  margin-bottom: 10%;
+  margin-right: 28%;
+  margin-top: 20px;
+  font-size: x-large;
+  padding: 103px;
+  font-style: inherit;
+}
+
+.new-meeting-input {
+
+  display: flex;
+  
+  border:none;
+  flex-direction: column;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  border-radius: 26px;
+  font-size: 17px;
+  padding: 14px 16px;
+  width: 330px;
+  background-color: #EFEFEF;
+  margin-bottom: 10px;
+}
 
 nav a.active {
   height: 50 vh;
@@ -217,4 +252,8 @@ body {
 
 button {
   border: none;
+}
+
+h2 {
+  font-family: 'Times New Roman', Times, serif;
 }

@@ -12,7 +12,7 @@ function CompletedMeetingsContainer() {
       </div>
 
       <div className="meetings-container">
-        <h3>Employees Meetings</h3>
+        <h2>Employees Meetings</h2>
       <EmployeeMeetings />
       </div>
     </div>

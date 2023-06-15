@@ -19,10 +19,10 @@ function EmployeeMeetings() {
   }, [id])
 
 return (
-  <div>
+  <div >
     {staffMeetings.map((meetingInfo) => {
       return (
-        <div key={meetingInfo.id}>
+        <div key={meetingInfo.id} className="employee-meetings">
           <ul>
             <li>{meetingInfo.scheduled_date}</li>
             <li>{meetingInfo.title}</li>

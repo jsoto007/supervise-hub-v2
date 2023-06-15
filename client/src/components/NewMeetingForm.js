@@ -47,7 +47,7 @@ function NewMeetingForm() {
   return (
     <div>
       
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="new-meeting-form">
         <input
           type="text"
           name="title"
@@ -55,7 +55,9 @@ function NewMeetingForm() {
           id="title"
           onChange={handleChange}
           placeholder="title"
+          className="new-meeting-input"
         />
+        <br/>
         <input
           type="text"
           name="scheduled_date"
@@ -63,6 +65,7 @@ function NewMeetingForm() {
           id="scheduled_date"
           onChange={handleChange}
           placeholder="scheduled_date"
+          className="new-meeting-input"
         />
         <br />
         <StaffDropDownMenu staffInfo={formData} setStaffInfo={setFormData} />
