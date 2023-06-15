@@ -6,12 +6,7 @@ import EditMeeting from "./EditMeeting";
 
 function MeetingCard( { meeting } ) {
 
- 
-
   const [toggleEdit, setToggleEdit] = useState(false)
-
-
- 
 
   function handleEditToggle(){
     setToggleEdit((toggleEdit) => !toggleEdit)

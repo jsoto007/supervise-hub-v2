@@ -37,9 +37,6 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
       setToggleEdit((toggleEdit) => !toggleEdit)
   }
 
-  function handlePatchedCategory(editedMeeting) {
-
-  }
 
   function handleChange(e) {
     const key = e.target.id

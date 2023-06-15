@@ -48,7 +48,9 @@ function Login() {
           id="username"
           onChange={handleChange}
           placeholder="Username"
+          className="auth-field"
         />
+        <br />
         <input
         type="password"
         name="password"
@@ -56,8 +58,10 @@ function Login() {
         id="password"
         onChange={handleChange}
         placeholder="Password"
+        className="auth-field"
       />
-      <button type="submit">Log In</button>
+      <br />
+      <button  className='login-btn' type="submit">Log In</button>
         {errors ? (
           <ul className='error-messages' key={errors.login}>
           <li>{errors.login}</li>

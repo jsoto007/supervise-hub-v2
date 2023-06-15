@@ -18,3 +18,116 @@ code {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: red;
 }
+
+#login-signup {
+  float: right; 
+  margin-right: 70px;
+  background-color: #FDFDFD;
+  border-radius: 26px;
+  margin-top: -14%;
+  margin-bottom: 10%;
+  font-size: x-large;
+  padding: 105px;
+  font-style: inherit;
+
+}
+
+#app-logo {
+  max-height: 200px;
+  min-height: auto;
+  margin-top: 15%;
+  border-radius: 10%;
+  margin-left: 10%;
+
+}
+
+#nav-bar {
+  background-color: #FDFDFD;
+  padding: 10px;
+  font-weight: bold;
+  font-size: x-large;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* nav a.active {
+  height: 50 vh;
+  min-height: 400px;
+  color: black;
+  border-radius: 12px;
+  background-color: #BED2C4; 
+  font-family: 'Times New Roman', Times, serif;
+
+} */
+
+#logout-btn {
+  float: right;
+  padding: 2px;
+  background-color: #FDFDFD;
+  margin-right: 50px;
+  margin-top: 12px;
+
+}
+
+.login-btn {
+  font-size:x-large;
+  justify-content: center;
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+  margin-left: 18%;
+  margin-bottom: 7px;
+  padding: 8px;
+  padding-left: 80px;
+  padding-right: 80px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #BED2C4;
+}
+
+.create-acc-btn {
+  font-size:x-large;
+  justify-content: center;
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+  margin-left: 17%;
+  margin-top: 7px;
+  padding: 8px;
+
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #D0E3CD;
+}
+
+.auth-field {
+  display: flex;
+  border:none;
+  flex-direction: column;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  border-radius: 26px;
+  font-size: 17px;
+  padding: 14px 16px;
+  width: 330px;
+  background-color: #EFEFEF;
+  margin-bottom: 10px;
+}
+
+#app-logo {
+  max-height: 200px;
+  min-height: auto;
+  margin-top: 15%;
+  border-radius: 10%;
+  margin-left: 10%;
+}
+
+
+hr {
+  height: 3px;
+  background-color: black;
+  border: none;
+}
+
+body {
+  background-color: #EFEFEF;
+}

@@ -40,7 +40,6 @@ function Signup() {
       })
   }
 
-  console.log(errors)
   return (
     <div>
       <form onSubmit={handleSignup}>
@@ -51,7 +50,9 @@ function Signup() {
           id="username1"
           onChange={handleChange}
           placeholder="Username"
+          className="auth-field"
         />
+        <br />
           <input
           type="password"
           name="password"
@@ -59,7 +60,9 @@ function Signup() {
           id="password1"
           onChange={handleChange}
           placeholder="Password"
+          className="auth-field"
         />
+        <br />
         <input
           type="text"
           name="email"
@@ -67,6 +70,7 @@ function Signup() {
           id="email1"
           onChange={handleChange}
           placeholder="Email"
+          className="auth-field"
         />
 
         {errors.length > 0 && (
@@ -76,8 +80,8 @@ function Signup() {
             ))}
           </ul>
         )}
-
-        <button type="submit"> Create Account </button>
+        <br />
+        <button className="create-acc-btn" type="submit"> Create Account </button>
       </form>
     </div>
   )

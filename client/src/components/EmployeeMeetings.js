@@ -27,7 +27,7 @@ return (
             <li>{meetingInfo.scheduled_date}</li>
             <li>{meetingInfo.title}</li>
           </ul>
-         <NotesCard  notesData={ meetingInfo}/>
+         <NotesCard  notesData={meetingInfo}/>
         </div>
       )
     })}
