@@ -5,8 +5,8 @@ import UserMeetingCard from "./UserMeetingCard";
 function UserMeetings(){
 
   return (
-    <div>
-<h1>User Meetings</h1>
+    <div className="user-meeting">
+<h1>User Meetings and Notes</h1>
     <UserMeetingCard />
     </div>
   )

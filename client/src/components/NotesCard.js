@@ -9,7 +9,7 @@ function NotesCard( { notesData } ) {
 
   return (
     <Popup
-    trigger={<button className="button"> Meetings Notes </button>}
+    trigger={<button className="dispay-notes-btn"> Meetings Notes </button>}
     modal
     nested
   >

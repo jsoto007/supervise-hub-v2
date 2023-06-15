@@ -9,10 +9,10 @@ function UserMeetingCard() {
   const {meetingData} = useContext(DataContext)
 
   return (
-    <div className="meetings-card">
+    <div>
       {meetingData.map((meeting) => {
         return (
-          <div key={meeting.id}>
+          <div key={meeting.id} className="meetings-card">
             <ul>
               {meeting.completed ? (<span id="check-mark">✓</span>) :  null}
               <li><b>{meeting.staff_name}</b>  | {meeting.scheduled_date}</li>

@@ -4,7 +4,7 @@ import { DataContext } from "../context/DataContextProvider";
 function StaffDropDownMenu( { staffInfo, setStaffInfo } ){
 
   const  {employeeData} = useContext(DataContext)
-  
+
   function handleSelect(e) {
     setStaffInfo({
       ... staffInfo, 
@@ -15,7 +15,7 @@ function StaffDropDownMenu( { staffInfo, setStaffInfo } ){
   return (
     <div>
 
-      <select onChange={handleSelect}>
+      <select className="dropdown-select" onChange={handleSelect}>
         <option>Please select a Staff</option>
         {employeeData.map((empl) => {
           return (

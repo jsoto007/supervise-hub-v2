@@ -72,6 +72,31 @@ code {
 
 }
 
+.dropdown-select {
+  font-size: x-large;
+  justify-content: center;
+  border-radius: 26px;
+  cursor: pointer;
+  padding: 8px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#create-meeting-tbn {
+  font-size: x-large;
+    justify-content: center;
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+    margin-top: 22px;
+    padding: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #D0E3CD;
+}
+
 .employee-menu-container {
   margin-top: 15px;
   background-color: #FDFDFD;
@@ -203,7 +228,15 @@ code {
   margin-top: 20px;
   font-size: x-large;
   padding: 103px;
+  padding-top: 20px;
   font-style: inherit;
+}
+
+.user-meeting {
+  background-color: #FDFDFD;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 22px;
 }
 
 .new-meeting-input {
@@ -220,6 +253,29 @@ code {
   width: 330px;
   background-color: #EFEFEF;
   margin-bottom: 10px;
+}
+
+.meetings-card {
+  background-color: #47556929;
+    margin-bottom: 15px;
+    margin-left: 8%;
+    margin-right: 8%;
+    border-radius: 23px;
+}
+
+.dispay-notes-btn {
+  font-size: large;
+  justify-content: center;
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+  margin-bottom: 7px;
+  padding: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  /* background-color: #bed2c4; */
+  background-color: #F8D476;
 }
 
 nav a.active {
@@ -255,5 +311,9 @@ button {
 }
 
 h2 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
   font-family: 'Times New Roman', Times, serif;
 }
