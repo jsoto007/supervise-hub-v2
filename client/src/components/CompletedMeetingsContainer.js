@@ -7,7 +7,7 @@ function CompletedMeetingsContainer() {
   return (
     <div>
       <div className="menu-container">
-        <h3>Employees</h3>
+        
       <EmployeeMenu />
       </div>
 

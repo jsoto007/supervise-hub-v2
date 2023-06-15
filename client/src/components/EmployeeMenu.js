@@ -15,7 +15,8 @@ function EmployeeMenu() {
   }, [])
 
   return (
-    <div className="menu-container">
+    <div className="employee-menu-container">
+      <h3>Employees With Completed Supervisions</h3>
       {employees.map((emp)=> {
         return (
           <EmployeeCard  employeeInfo={emp.employee} key={emp.id}/>

@@ -72,6 +72,12 @@ code {
 
 }
 
+.employee-menu-container {
+  margin-top: 15px;
+  background-color: #FDFDFD;
+
+}
+
 .menu-container {
    float: left;
    width: 35%;
@@ -171,6 +177,15 @@ code {
   text-decoration: none;
   margin-left: 15px;
 }
+
+.employee-list-btn {
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: larger;
+  border-radius: 10px;
+}
+
 
 nav a.active {
   height: 50 vh;
