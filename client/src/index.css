@@ -59,6 +59,16 @@ code {
 
 } */
 
+.delete-edit-btn {
+  background-color: none;
+  /* display: flex; */
+  /* float: right; */
+  border: none;
+  margin-bottom: 3px;
+  margin-right: 5px;
+  border-radius: 6px;
+}
+
 #logout-btn {
   float: right;
   padding: 2px;
@@ -99,6 +109,24 @@ code {
   background-color: #D0E3CD;
 }
 
+
+.meetings_schedule {
+  display: flex;
+  float: left;
+  width: 25%;
+  border:none;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  border-radius: 63px;
+  font-size: 17px;
+  padding: 2px 6px;
+  width: 430px;
+  background-color: #D0E3CD;
+  margin-bottom: 27px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .auth-field {
   display: flex;
   border:none;
@@ -110,6 +138,11 @@ code {
   padding: 14px 16px;
   width: 330px;
   background-color: #EFEFEF;
+  margin-bottom: 10px;
+}
+
+#add-notes-btn {
+  border-radius: 5px;
   margin-bottom: 10px;
 }
 
@@ -128,6 +161,14 @@ hr {
   border: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   background-color: #EFEFEF;
+}
+
+button {
+  border: none;
 }

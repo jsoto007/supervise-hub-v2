@@ -29,7 +29,7 @@ function MeetingCard( { meeting } ) {
               <li>{meeting.staff_name}  | {meeting.scheduled_date}</li>
             </ul>
 
-            <button onClick={handleEditToggle}>✏️</button>
+            <button  className="delete-edit-btn" onClick={handleEditToggle}>✏️</button>
 
             <DeleteMeeting meeting={meeting} />
 
@@ -38,7 +38,7 @@ function MeetingCard( { meeting } ) {
               to={`/meetings/${meeting.id}/notes`}
             >
             <br />
-            <button>Add Notes to Meeting</button>
+            <button id="add-notes-btn">Add Notes to Meeting</button>
             </NavLink>
 
           </div>

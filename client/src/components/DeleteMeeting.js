@@ -20,7 +20,7 @@ function DeleteMeeting( { meeting } ) {
   }
 
   return (
-    <button onClick={handleDeleteClick}>🗑️</button>
+    <button className="delete-edit-btn" onClick={handleDeleteClick}>🗑️</button>
   )
 }
 

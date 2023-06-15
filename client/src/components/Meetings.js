@@ -11,7 +11,6 @@ function Meetings() {
       <h3>Upcoming Supervisions</h3>
       {meetingData.map((meeting) => {
         return (
-
           <MeetingCard meeting={meeting}/>
         )
       })}
