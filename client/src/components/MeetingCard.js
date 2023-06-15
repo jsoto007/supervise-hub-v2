@@ -16,11 +16,12 @@ function MeetingCard() {
               <li>{meeting.title}</li>
               <li>{meeting.staff_name}  | {meeting.scheduled_date}</li>
             </ul>
+            <DeleteMeeting meeting={meeting} />
+            
             <NavLink 
               id="details"
               to={`/meetings/${meeting.id}/notes`}
             >
-            <DeleteMeeting meeting={meeting} />
             <br />
             <button>Add Notes to Meeting</button>
             </NavLink>

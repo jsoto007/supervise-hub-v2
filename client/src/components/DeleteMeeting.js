@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DataContext } from "../context/DataContextProvider";
 
 function DeleteMeeting( { meeting } ) {
+
+  const {meetingData, setMeetingData} = useContext(DataContext)
 
   const {id} = meeting
 
@@ -10,9 +13,10 @@ function DeleteMeeting( { meeting } ) {
     })
     .then(handleDeleteUpdate(meeting))
   }
-  
-  function handleDeleteUpdate() {
 
+  function handleDeleteUpdate(meeting) {
+    const updatedMeetings = meetingData.filter((meet) => meet.id !== meeting.id);
+    setMeetingData(updatedMeetings)
   }
 
   return (
