@@ -65,10 +65,10 @@ function NewMeetingForm() {
           placeholder="Title: Meeting Description"
           className="new-meeting-input"
         />
-        <br/>
+        {/* <br/> */}
      
-        <br />
         <DateTimePicker onChange={setDateTime} value={dateTime} />
+        <br />
 
         <StaffDropDownMenu staffInfo={formData} setStaffInfo={setFormData} />
         <button id="create-meeting-tbn" type="sumit">Add Meeting</button>

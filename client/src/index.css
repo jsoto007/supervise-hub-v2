@@ -12,6 +12,16 @@ code {
     monospace;
 }
 
+.react-datetime-picker__wrapper {
+  border-radius: 23px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 4px 28px;
+}
+
 
 .error-messages {
   list-style-type: none;
@@ -81,6 +91,7 @@ code {
   padding-left: 30px;
   padding-right: 30px;
   font-family: 'Times New Roman', Times, serif;
+  margin-top: 13px;
 }
 
 #create-meeting-tbn {
