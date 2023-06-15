@@ -67,14 +67,13 @@ function NotesForm() {
     <div>
       <form onSubmit={handleSubmit} className="new-meeting-form">
         <h2>Meeting Notes</h2>
-        {/* <h3>Supervision: {thisMeeting.staff_name}</h3> */}
         <input
           type="text"
           name="criteria1"
           value={formData.criteria1}
           id="criteria1"
           onChange={handleChange}
-          placeholder="criteria1"
+          placeholder="Criteria: Topic for this Notes"
           className="new-notes-input"
         />
         <br/>
@@ -84,7 +83,7 @@ function NotesForm() {
           value={formData.note1}
           id="note1"
           onChange={handleChange}
-          placeholder="note1"
+          placeholder="Notes: relevant to the criteria"
           className="new-notes-input"
         />
         <br/>
@@ -94,7 +93,7 @@ function NotesForm() {
           value={formData.criteria2}
           id="criteria2"
           onChange={handleChange}
-          placeholder="criteria2"
+          placeholder="Criteria: Topic for this Notes"
           className="new-notes-input"
         />
         <br/>
@@ -104,7 +103,7 @@ function NotesForm() {
           value={formData.note2}
           id="note2"
           onChange={handleChange}
-          placeholder="note2"
+          placeholder="Notes: relevant to the criteria"
           className="new-notes-input"
         />
         <br/>
@@ -114,7 +113,7 @@ function NotesForm() {
           value={formData.criteria3}
           id="criteria3"
           onChange={handleChange}
-          placeholder="criteria3"
+          placeholder="Criteria: Topic for this Notes"
           className="new-notes-input"
         />
         <br/>
@@ -124,7 +123,7 @@ function NotesForm() {
           value={formData.note3}
           id="note3"
           onChange={handleChange}
-          placeholder="note3"
+          placeholder="Notes: relevant to the criteria"
           className="new-notes-input"
         />
         <br/>
