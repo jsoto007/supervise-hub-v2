@@ -19,6 +19,10 @@ class MeetingsController < ApplicationController
 
   private
 
+  def find_user
+    user = User.find_by(id: session[:user_id])
+  end 
+
   def meeting_params
     params.permit(:title, :completed, :scheduled_date, :employee_id)
   end 

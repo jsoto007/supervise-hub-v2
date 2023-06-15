@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
   def session_params
     params.permit(:user_id, :username, :password)
   end 
+  
 
   # def render_record_invalid(e)
   #   render json: {errors: e.record.errors.full_messages }, status: :unprocessable_entity

@@ -6,11 +6,14 @@ function NewMeetingForm() {
 
   const [staffInfo, setStaffInfo] = useState([])
 
+  // console.log(staffInfo.id, `this is the interpolation ${formData.employee_id}`)
+
   const [formData, setFormData] = useState({
     title: "First TEST", 
     completed: false, 
-    scheduled_date: "2023-12-12", 
-    employee_id: "136"
+    employee_id: "",
+    scheduled_date: "2023-12-12" 
+    
   })
 
   async function handleSubmit(e) {
@@ -41,7 +44,7 @@ function NewMeetingForm() {
 
   return (
     <div>
-      <StaffDropDownMenu />
+      
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -50,8 +53,17 @@ function NewMeetingForm() {
           id="title"
           onChange={handleChange}
           placeholder="title"
-          
-          ></input>
+        />
+        <input
+          type="text"
+          name="scheduled_date"
+          value={staffInfo.scheduled_date}
+          id="scheduled_date"
+          onChange={handleChange}
+          placeholder="scheduled_date"
+        />
+        <br />
+        <StaffDropDownMenu staffInfo={formData} setStaffInfo={setFormData} />
         <button type="sumit">Add Meeting</button>
       </form>
 
