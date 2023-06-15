@@ -25,7 +25,7 @@ function NotesForm() {
       if (meeting.id === newNotes.meeting_id) {
         
         meeting.completed = true;
-        
+
         return {
           ...meeting, 
           notes: [newNotes, ...meeting.notes]
@@ -65,7 +65,9 @@ function NotesForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="new-meeting-form">
+        <h2>Meeting Notes</h2>
+        {/* <h3>Supervision: {thisMeeting.staff_name}</h3> */}
         <input
           type="text"
           name="criteria1"
@@ -73,7 +75,9 @@ function NotesForm() {
           id="criteria1"
           onChange={handleChange}
           placeholder="criteria1"
+          className="new-notes-input"
         />
+        <br/>
         <input
           type="text"
           name="note1"
@@ -81,7 +85,9 @@ function NotesForm() {
           id="note1"
           onChange={handleChange}
           placeholder="note1"
+          className="new-notes-input"
         />
+        <br/>
         <input
           type="text"
           name="criteria2"
@@ -89,7 +95,9 @@ function NotesForm() {
           id="criteria2"
           onChange={handleChange}
           placeholder="criteria2"
+          className="new-notes-input"
         />
+        <br/>
         <input
           type="text"
           name="note2"
@@ -97,7 +105,9 @@ function NotesForm() {
           id="note2"
           onChange={handleChange}
           placeholder="note2"
+          className="new-notes-input"
         />
+        <br/>
         <input
           type="text"
           name="criteria3"
@@ -105,7 +115,9 @@ function NotesForm() {
           id="criteria3"
           onChange={handleChange}
           placeholder="criteria3"
+          className="new-notes-input"
         />
+        <br/>
         <input
           type="text"
           name="note3"
@@ -113,9 +125,10 @@ function NotesForm() {
           id="note3"
           onChange={handleChange}
           placeholder="note3"
+          className="new-notes-input"
         />
-
-        <button type="submit"> Add Notes </button>
+        <br/>
+        <button id="create-notes-tbn" type="submit"> Add Notes </button>
       </form>
     </div>
   )

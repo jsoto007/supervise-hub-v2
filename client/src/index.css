@@ -96,6 +96,19 @@ code {
     font-family: 'Times New Roman', Times, serif;
     background-color: #D0E3CD;
 }
+#create-notes-tbn {
+  font-size: x-large;
+    justify-content: center;
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+
+    padding: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #D0E3CD;
+}
 
 #check-mark {
   display: flex;
@@ -247,9 +260,7 @@ code {
 }
 
 .new-meeting-input {
-
   display: flex;
-  
   border:none;
   flex-direction: column;
   font-family: 'Times New Roman', Times, serif;
@@ -260,6 +271,20 @@ code {
   width: 330px;
   background-color: #EFEFEF;
   margin-bottom: 10px;
+}
+
+.new-notes-input {
+  display: flex;
+  border:none;
+  flex-direction: column;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  border-radius: 26px;
+  font-size: 17px;
+  padding: 14px 16px;
+  width: 330px;
+  background-color: #EFEFEF;
+  margin-top: 2px;
 }
 
 .meetings-card {
