@@ -12,6 +12,7 @@ code {
     monospace;
 }
 
+/* Start of Calendar CSS */
 .react-datetime-picker__wrapper {
   border-radius: 23px;
   padding-left: 20px;
@@ -22,6 +23,20 @@ code {
   padding: 4px 28px;
 }
 
+.react-datetime-picker__button svg {
+  background-color: #F8D476;
+}
+
+/* End of Calendar CSS */
+
+
+#check-mark {
+  display: flex;
+  position:relative;
+  max-width: 15px;
+  min-width: 15px;
+  background-color: #4B6B79;
+}
 
 .error-messages {
   list-style-type: none;
@@ -119,14 +134,10 @@ code {
     padding-right: 30px;
     font-family: 'Times New Roman', Times, serif;
     background-color: #D0E3CD;
+    
 }
 
-#check-mark {
-  display: flex;
-  position:relative;
-  margin-right: 937px;
-  background-color: #4B6B79;
-}
+
 
 .employee-menu-container {
   margin-top: 15px;
@@ -199,11 +210,11 @@ code {
   border:none;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bolder;
-  border-radius: 63px;
+  border-radius: 23px;
   font-size: 17px;
   padding: 2px 6px;
   width: 430px;
-  background-color: #BED2C4;
+  background-color: #47556929;
   margin-bottom: 27px;
   margin-left: 10px;
   margin-right: 10px;
@@ -226,6 +237,9 @@ code {
 #add-notes-btn {
   border-radius: 5px;
   margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #4B6B79;
 }
 
 #app-logo {
