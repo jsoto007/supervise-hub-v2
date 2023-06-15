@@ -32,7 +32,7 @@ function NewMeetingForm() {
   }
 
   function handleAddMeeting(newMeeting) {
-    setMeetingData([...meetingData, newMeeting])
+    setMeetingData([newMeeting, ...meetingData])
   }
 
 

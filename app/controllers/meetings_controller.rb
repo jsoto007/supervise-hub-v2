@@ -18,7 +18,13 @@ class MeetingsController < ApplicationController
   end 
 
   def update
+    meeting = Meeting.find_by(id: params[:id])
+    meeting.update!(
+      title: params[:title],
+      scheduled_date: params[:scheduled_date]
+    )
 
+    render json: meeting, status: :accepted
   end 
 
   def destroy

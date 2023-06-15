@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   get "/auth", to: "users#show"
 
+  patch "meetings/:id", to: "meetings#update"
   get "/completed-meetings", to: "meetings#completed_meetings"
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
