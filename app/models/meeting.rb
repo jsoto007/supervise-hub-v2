@@ -3,6 +3,10 @@ class Meeting < ApplicationRecord
   belongs_to :employee
   has_many :notes, dependent: :destroy
 
+  validates :title, presence: true
+  validates :scheduled_date, presence: true
+
+
   def staff_name
     self.employee.name
   end 

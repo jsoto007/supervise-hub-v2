@@ -28,8 +28,6 @@ code {
 }
 
 /* End of Calendar CSS */
-
-
 #check-mark {
   display: flex;
   position:relative;
@@ -214,7 +212,7 @@ code {
   font-size: 17px;
   padding: 2px 6px;
   width: 430px;
-  background-color: #47556929;
+  background-color: white;
   margin-bottom: 27px;
   margin-left: 10px;
   margin-right: 10px;
@@ -237,7 +235,7 @@ code {
 #add-notes-btn {
   border-radius: 5px;
   margin-bottom: 10px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
   color: #4B6B79;
 }
