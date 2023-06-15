@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 
-function EditMeeting( { meeting } ) {
+function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
 
   const { id, title, scheduled_date, staff_name} = meeting;
 
@@ -25,6 +25,7 @@ function EditMeeting( { meeting } ) {
         console.log(data)
       } 
 
+      setToggleEdit((toggleEdit) => !toggleEdit)
   }
 
   function handlePatchedCategory(editedMeeting) {

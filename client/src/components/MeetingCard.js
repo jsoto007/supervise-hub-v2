@@ -1,24 +1,38 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import { DataContext } from "../context/DataContextProvider";
 import { NavLink } from "react-router-dom"
 import DeleteMeeting from "./DeleteMeeting";
 import EditMeeting from "./EditMeeting";
 
-function MeetingCard() {
+function MeetingCard( { meeting } ) {
 
-  const {meetingData} = useContext(DataContext)
+  const [toggleEdit, setToggleEdit] = useState(false)
+
+  function handleEditToggle(){
+    setToggleEdit((toggleEdit) => !toggleEdit)
+  }
 
   return (
     <div className="meetings_schedule">
-      {meetingData.map((meeting) => {
-        return (
-          <div key={meeting.id}>
+      <div key={meeting.id}>
+        {toggleEdit ? (
+
+            <EditMeeting 
+              meeting={meeting} 
+              toggleEdit={toggleEdit} 
+              setToggleEdit={setToggleEdit} 
+            />
+        ) : (
+          <div>
             <ul>
               <li>{meeting.title}</li>
               <li>{meeting.staff_name}  | {meeting.scheduled_date}</li>
             </ul>
+
+            <button onClick={handleEditToggle}>✏️</button>
+
             <DeleteMeeting meeting={meeting} />
-            <EditMeeting meeting={meeting} />
+
             <NavLink 
               id="details"
               to={`/meetings/${meeting.id}/notes`}
@@ -26,9 +40,10 @@ function MeetingCard() {
             <br />
             <button>Add Notes to Meeting</button>
             </NavLink>
+
           </div>
-        )
-      })}
+        )}
+      </div>
     </div>
   )
 }
