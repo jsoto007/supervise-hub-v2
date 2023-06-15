@@ -83,7 +83,7 @@ function NotesForm() {
           value={formData.note1}
           id="note1"
           onChange={handleChange}
-          placeholder="Notes: relevant to the criteria"
+          placeholder="NOTES: relevant to the criteria"
           className="new-notes-input"
         />
         <br/>
@@ -103,7 +103,7 @@ function NotesForm() {
           value={formData.note2}
           id="note2"
           onChange={handleChange}
-          placeholder="Notes: relevant to the criteria"
+          placeholder="NOTES: relevant to the criteria"
           className="new-notes-input"
         />
         <br/>
@@ -123,7 +123,7 @@ function NotesForm() {
           value={formData.note3}
           id="note3"
           onChange={handleChange}
-          placeholder="Notes: relevant to the criteria"
+          placeholder="NOTES: relevant to the criteria"
           className="new-notes-input"
         />
         <br/>

@@ -11,7 +11,6 @@ function NewMeetingForm() {
     completed: false, 
     employee_id: "",
     scheduled_date: "" 
-    
   })
 
   async function handleSubmit(e) {
