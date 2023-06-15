@@ -1,16 +1,23 @@
 import React, { useState, useContext } from "react";
 import StaffDropDownMenu from "./StaffDropDowmMenu";
 import { DataContext } from "../context/DataContextProvider";
+import DateTimePicker from "react-datetime-picker";
+
+import 'react-datetime-picker/dist/DateTimePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import 'react-clock/dist/Clock.css';
 
 function NewMeetingForm() {
 
   const {meetingData, setMeetingData} = useContext(DataContext)
 
+  const [dateTime, setDateTime] = useState(new Date());
+
   const [formData, setFormData] = useState({
     title: "", 
     completed: false, 
     employee_id: "",
-    scheduled_date: "" 
+    scheduled_date: `${dateTime}` 
   })
 
   async function handleSubmit(e) {
@@ -43,6 +50,8 @@ function NewMeetingForm() {
     })
   }
 
+ console.log(dateTime)
+
   return (
     <div>
       <form onSubmit={handleSubmit} className="new-meeting-form">
@@ -57,16 +66,10 @@ function NewMeetingForm() {
           className="new-meeting-input"
         />
         <br/>
-        <input
-          type="text"
-          name="scheduled_date"
-          value={formData.scheduled_date}
-          id="scheduled_date"
-          onChange={handleChange}
-          placeholder="Scheduled Date"
-          className="new-meeting-input"
-        />
+     
         <br />
+        <DateTimePicker onChange={setDateTime} value={dateTime} />
+
         <StaffDropDownMenu staffInfo={formData} setStaffInfo={setFormData} />
         <button id="create-meeting-tbn" type="sumit">Add Meeting</button>
       </form>
