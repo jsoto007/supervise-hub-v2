@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import StaffDropDownMenu from "./StaffDropDowmMenu";
-
+import { DataContext } from "../context/DataContextProvider";
 
 function NewMeetingForm() {
+
+  const {meetingData, setMeetingData} = useContext(DataContext)
 
   const [formData, setFormData] = useState({
     title: "", 
@@ -22,11 +24,15 @@ function NewMeetingForm() {
       body:JSON.stringify(formData)
     });
 
-    const data = await response.json();
+    const newMeeting = await response.json();
     if (response.ok) {
-      console.log(data)
+      handleAddMeeting(newMeeting)
     }
 
+  }
+
+  function handleAddMeeting(newMeeting) {
+    setMeetingData([...meetingData, newMeeting])
   }
 
 
