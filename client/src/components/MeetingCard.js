@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { DataContext } from "../context/DataContextProvider";
 import { NavLink } from "react-router-dom"
 import DeleteMeeting from "./DeleteMeeting";
@@ -6,7 +6,12 @@ import EditMeeting from "./EditMeeting";
 
 function MeetingCard( { meeting } ) {
 
+ 
+
   const [toggleEdit, setToggleEdit] = useState(false)
+
+
+ 
 
   function handleEditToggle(){
     setToggleEdit((toggleEdit) => !toggleEdit)

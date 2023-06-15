@@ -1,6 +1,9 @@
 import React, { useState, useContext } from "react";
+import { DataContext } from "../context/DataContextProvider";
 
 function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
+
+  const {meetingData, setMeetingData} = useContext(DataContext)
 
   const { id, title, scheduled_date, staff_name} = meeting;
 
@@ -8,6 +11,12 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
     title: `${title}`,
     scheduled_date: `${scheduled_date}`
   })
+
+  function handleEditMeeting(data) {
+    const updatedMeetings = meetingData.filter((meet) => meet.id !== meeting.id);
+    
+    setMeetingData([data, ...updatedMeetings])
+  }
 
   async function handlePatchSubmit(e) {
     e.preventDefault();
@@ -22,7 +31,7 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
 
     const data = await response.json();
       if(response.ok){
-        console.log(data)
+        handleEditMeeting(data)
       } 
 
       setToggleEdit((toggleEdit) => !toggleEdit)
