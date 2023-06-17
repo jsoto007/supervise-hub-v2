@@ -7,7 +7,6 @@ function DataContextProvider( { children } ) {
   const [meetingData, setMeetingData] = useState([])
   const [employeeData, setEmployeeData] = useState([])
 
-
   useEffect(() => {
     fetch(`/meetings`)
     .then((resp) => {
