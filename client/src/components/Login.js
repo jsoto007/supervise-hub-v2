@@ -25,9 +25,17 @@ function Login() {
     const data = await response.json();
     if(response.ok){
       setCurrentUser(data)
+      window.localStorage.setItem("isLoggedIn", true)
+      handleReload()
     } else {
       setErrors(data.error)
     }
+  }
+
+   function handleReload() {
+    setTimeout(function(){
+      window.location.reload();
+  }, 100);
   }
 
   function handleChange(e) {

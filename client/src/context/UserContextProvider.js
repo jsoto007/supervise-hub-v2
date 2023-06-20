@@ -7,20 +7,36 @@ function UserContextProvider( { children } ) {
 
   })
 
+ 
+
   useEffect(() => {
     fetch('/auth')
     .then(resp => {
       if (resp.ok){
-        resp.json().then(user => setCurrentUser(user))
+        resp.json().then(user => {
+          setCurrentUser(user)
+          window.localStorage.setItem("isLoggedIn", true)
+        })
       }
     })
   }, [])
+
+
+  function handleReload() {
+    setTimeout(function(){
+      window.location.reload();
+  }, 100);
+  }
 
   function handleLogout() {
     fetch("/logout", {
       method: 'DELETE', 
     })
-    .then(()=> setCurrentUser({}))
+    .then(()=> {
+      setCurrentUser({})
+      localStorage.removeItem("isLoggedIn")
+      handleReload()
+  })
   }
 
 return (

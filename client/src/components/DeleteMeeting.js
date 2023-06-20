@@ -5,7 +5,6 @@ function DeleteMeeting( { meeting } ) {
 
   const {meetingData, setMeetingData} = useContext(DataContext)
 
-  console.log(meetingData)
   const {id} = meeting
 
   function handleDeleteClick() {

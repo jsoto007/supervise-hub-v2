@@ -14,6 +14,12 @@ function Signup() {
     email: ""
   })
 
+  function handleReload() {
+    setTimeout(function(){
+      window.location.reload();
+  }, 100);
+  }
+
   async function handleSignup(e) {
     e.preventDefault();
 
@@ -27,6 +33,8 @@ function Signup() {
     const data = await response.json();
     if(response.ok) {
       setCurrentUser(data)
+      window.localStorage.setItem("isLoggedIn", true)
+      handleReload()
     } else {
       setErrors(data.errors)
     }

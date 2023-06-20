@@ -15,14 +15,18 @@ import CompletedMeetingsContainer from "./CompletedMeetingsContainer";
 
 function App() {
 
-  const {currentUser}  = useContext(UserContext);
+  // const {currentUser}  = useContext(UserContext);
 
-  if (!currentUser.id) return <Auth />
+  // if (!currentUser.id) return <Auth />
+
+  const userLogedIn = window.localStorage.getItem("isLoggedIn");
+
+  if (userLogedIn === null) return <Auth />
 
   return (
     <div className="App">
       
-      <h1>Welcome {currentUser.username}</h1>
+      {/* <h1>Welcome {currentUser.username}</h1> */}
       <NavBar />
 
       <Switch>

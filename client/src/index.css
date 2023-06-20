@@ -311,6 +311,7 @@ code {
 }
 
 .meetings-card {
+  align-items: start;
   background-color: #47556929;
     margin-bottom: 15px;
     margin-left: 8%;
