@@ -13,7 +13,7 @@ function Auth() {
   }
 
   return (
-    <div class="flex ...">
+    <div class="flex ... drop-shadow-xl">
         <div class="flex-1 ...">
           <img
                 id="app-logo"
@@ -22,10 +22,10 @@ function Auth() {
           />
         </div>
       <div class="contents">
-      <div class="flex-1 ...">
+      <div class="flex-1 ... bg-white mx-5">
         <Login />
           <hr id="login-line"/>
-          {toggleBtn ? (<button onClick={handleToggleEdit}> Create an Account </button>) : (<Signup />)}    
+          {toggleBtn ? (<button  class="btn bg-emerald-900 bg-opacity-20 rounded-md px-2 mx-8 my-4" onClick={handleToggleEdit}> Create an Account </button>) : (<Signup />)}    
       </div> 
       </div>
     </div>

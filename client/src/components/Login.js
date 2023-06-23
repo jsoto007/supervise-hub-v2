@@ -47,8 +47,9 @@ function Login() {
   }
 
   return (
-    <div>
+    <div class="items-center" >
       <form onSubmit={handleSubmit}>
+      <label class="block text-gray-700 text-sm font-bold mb-1 mx-8" for="username">Username</label>
         <input
           type="text"
           name="username"
@@ -56,9 +57,10 @@ function Login() {
           id="username"
           onChange={handleChange}
           placeholder="Username"
-          className="auth-field"
+          class=" text-black font-bold input input-bordered w-full max-w-xs my-3 mx-8 py-2 rounded-md bg-gray-500 opacity-30"
         />
         <br />
+        <label class="block text-gray-700 text-sm font-bold mb-1 mx-8" for="password">Password</label>
         <input
         type="password"
         name="password"
@@ -66,10 +68,11 @@ function Login() {
         id="password"
         onChange={handleChange}
         placeholder="Password"
-        className="auth-field"
+        class=" text-black  font-bold input input-bordered w-full max-w-xs my-3 mx-8 py-2 rounded-md bg-gray-500 opacity-30"
       />
       <br />
-      <button  className='login-btn' type="submit">Log In</button>
+      <button class="btn bg-emerald-900 bg-opacity-40 rounded-md px-2 mx-8 my-4">Log In</button>
+
         {errors ? (
           <ul className='error-messages' key={errors.login}>
           <li>{errors.login}</li>
