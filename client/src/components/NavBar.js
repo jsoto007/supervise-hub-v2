@@ -5,10 +5,10 @@ import { UserContext } from "../context/UserContextProvider";
 
 function NavBar() {
 
-  // const {handleLogout} = useContext(UserContext)
+  const {currentUser} = useContext(UserContext)
 
   return (
-    <div class="bg-white my-6 text-xl py-1 normal-case">
+    <div class="bg-white my-6 text-xl py-1 normal-case mx-4 rounded-lg">
       <nav id="nav-bar">
         <NavLink
           to="/"
