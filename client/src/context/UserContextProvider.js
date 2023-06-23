@@ -7,8 +7,6 @@ function UserContextProvider( { children } ) {
 
   })
 
- 
-
   useEffect(() => {
     fetch('/auth')
     .then(resp => {

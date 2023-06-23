@@ -26,7 +26,4 @@ function EmployeeMenu() {
   )
 }
 
-
-
 export default EmployeeMenu;
-

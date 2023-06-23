@@ -1,47 +1,56 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { UserContext } from "../context/UserContextProvider";
 
 
-
-
 function NavBar() {
 
-  const {handleLogout} = useContext(UserContext)
+  // const {handleLogout} = useContext(UserContext)
 
   return (
-    <div>
-      <button id="logout-btn" onClick={handleLogout}>Logout</button>
+    <div class="bg-white my-6 text-xl py-1 normal-case">
       <nav id="nav-bar">
         <NavLink
-          className="nav-link"
           to="/"
           exact
         >
+          <button class=" focus:outline-none  focus:bg-slate-300 mx-4 hover:bg-slate-200 rounded-md active:bg-slate-400 px-1">
           Home
+          </button>
         </NavLink>
         <NavLink
-        className="nav-link"
         to="/supervisions"
         exact
         >
+          <button class=" focus:outline-none  focus:bg-slate-300 mx-3 hover:bg-slate-200 rounded-md active:bg-slate-400 px-1">
           Supervisions
+          </button>
+          
         </NavLink>
         <NavLink
-        className="nav-link"
         to="/user/meetings"
         exact
         >
+          <button class=" focus:outline-none  focus:bg-slate-300 mx-3 hover:bg-slate-200 rounded-md active:bg-slate-400 px-1">
           My Meetings
+          </button>
         </NavLink>
         <NavLink
-        className="nav-link"
         to="/user/meetings/create"
         exact
         >
+          <button class=" focus:outline-none  focus:bg-slate-300 mx-4 hover:bg-slate-200 rounded-md active:bg-slate-400 px-1">
           Schedule Meeting
+          </button>
         </NavLink>
+
+        <button 
+        
+        class=" focus:outline-none  focus:bg-slate-300 mx-5 hover:bg-slate-200 rounded-md active:bg-slate-400 px-1 float-right">
+          Logout
+          </button>
       </nav>
+
     </div>
   )
 
