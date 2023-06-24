@@ -4,7 +4,7 @@ import { UserContext } from "../context/UserContextProvider";
 function Login() {
 
 
-  // const {setCurrentUser} = useContext(UserContext)
+  const {setCurrentUser} = useContext(UserContext)
 
   const [errors, setErrors] = useState([])
 
@@ -24,7 +24,8 @@ function Login() {
     });
     const data = await response.json();
     if(response.ok){
-      // setCurrentUser(data)
+      setCurrentUser(data)
+      console.log(data)
       window.localStorage.setItem("isLoggedIn", true)
       handleReload()
     } else {

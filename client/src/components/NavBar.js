@@ -5,7 +5,7 @@ import { UserContext } from "../context/UserContextProvider";
 
 function NavBar() {
 
-  const {currentUser} = useContext(UserContext)
+  const {handleLogout} = useContext(UserContext)
 
   return (
     <div class="bg-white my-6 text-xl py-1 normal-case mx-4 rounded-lg">
@@ -45,7 +45,7 @@ function NavBar() {
         </NavLink>
 
         <button 
-        
+        onClick={handleLogout}
         class=" focus:outline-none  focus:bg-slate-300 mx-5 hover:bg-slate-200 rounded-md active:bg-slate-400 px-1 float-right">
           Logout
           </button>

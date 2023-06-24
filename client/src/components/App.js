@@ -4,6 +4,8 @@ import NavBar from './NavBar';
 import Auth from './Auth';
 
 function App() {
+  
+  
   return (
     <div>
       <NavBar />
