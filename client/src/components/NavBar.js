@@ -9,6 +9,7 @@ function NavBar() {
 
   return (
     <div class="bg-white my-6 text-xl py-1 normal-case mx-4 rounded-lg">
+      
       <nav id="nav-bar">
         <NavLink
           to="/"

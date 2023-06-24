@@ -21,6 +21,10 @@ function Auth() {
                 alt="Expense Tacker"
                 class="rounded-2xl ml-2 mr-5"
           />
+      <ul class="text-center text-2xl font-serif font-medium">
+        <li class="my-3">Help your employees develop their roles through open communication</li>
+        <li>Promote Support, Learning, and Accountability</li>
+      </ul>
         </div>
       <div class="contents">
       <div class="flex-1 ... bg-white mx-5 rounded-2xl">

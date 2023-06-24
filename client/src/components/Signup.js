@@ -51,6 +51,7 @@ function Signup() {
   return (
     <div>
       <form onSubmit={handleSignup}>
+      <label class="block text-gray-700 text-lg font-bold mb-1 mx-8 mt-6" for="username">username</label>
         <input
           type="text"
           name="username"
@@ -58,9 +59,10 @@ function Signup() {
           id="username1"
           onChange={handleChange}
           placeholder="Username"
-          className="auth-field"
+          class=" text-black  font-bold input input-bordered w-full max-w-xs my-2 mx-8 py-2 rounded-md bg-gray-200"
         />
         <br />
+        <label class="block text-gray-700 text-lg font-bold mb-1 mx-8" for="password">Password</label>
           <input
           type="password"
           name="password"
@@ -68,9 +70,10 @@ function Signup() {
           id="password1"
           onChange={handleChange}
           placeholder="Password"
-          className="auth-field"
+          class=" text-black  font-bold input input-bordered w-full max-w-xs my-2 mx-8 py-2 rounded-md bg-gray-200"
         />
         <br />
+        <label class="block text-gray-700 text-lg font-bold mb-1 mx-8" for="email1">Email</label>
         <input
           type="text"
           name="email"
@@ -78,18 +81,25 @@ function Signup() {
           id="email1"
           onChange={handleChange}
           placeholder="Email"
-          className="auth-field"
+          class=" text-black  font-bold input input-bordered w-full max-w-xs my-2 mx-8 py-2 rounded-md bg-gray-200"
         />
 
         {errors.length > 0 && (
-          <ul className='error-messages'>
+          <ul >
             {errors.map((error) => (
-              <li key={error}>{error}</li>
+              <ul
+                key={error}
+                class="bg-red-400 mx-2 my-1 rounded-lg p-2"
+              >
+                <li class="mx-5">ⓧ  {error}</li>
+              </ul>
             ))}
           </ul>
         )}
         <br />
-        <button className="create-acc-btn" type="submit"> Create Account </button>
+        <button 
+          class="btn bg-emerald-900 bg-opacity-20 rounded-md px-2 mx-8 my-4" type="submit"
+        > Create Account </button>
       </form>
     </div>
   )

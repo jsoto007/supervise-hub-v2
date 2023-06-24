@@ -73,13 +73,12 @@ function Login() {
       />
       <br />
       <button class="btn bg-emerald-900 bg-opacity-40 rounded-md px-2 mx-8 my-4">Log In</button>
-
-        {errors ? (
-          <ul className='error-messages' key={errors.login}>
-          <li>{errors.login}</li>
-          </ul>
-          ): 
+        {errors.length < 1 ? 
           null
+          : 
+          <ul class="bg-red-400 mx-2 my-1 rounded-lg p-2" key={errors.login}>
+          <li class="mx-5">ⓧ  {errors.login}</li>
+          </ul>
         }
       </form>
     </div>
