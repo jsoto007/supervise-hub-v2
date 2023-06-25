@@ -7,8 +7,7 @@ function Meetings() {
   const {meetingData} = useContext(DataContext)
 
   return (
-    <div>
-      <h3>Upcoming Supervisions</h3>
+    <div class="grid grid-rows-3 grid-flow-col">
       {meetingData.map((meeting) => {
         return (
           <MeetingCard meeting={meeting}/>

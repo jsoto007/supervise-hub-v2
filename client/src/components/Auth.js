@@ -22,7 +22,7 @@ function Auth() {
                 class="rounded-2xl ml-2 mr-5"
           />
       <ul class="text-center text-2xl font-serif font-medium">
-        <li class="my-3">Help your employees develop their roles through open communication</li>
+        <li class="my-3 mt-4">Help your employees develop their roles through open communication</li>
         <li>Promote Support, Learning, and Accountability</li>
       </ul>
         </div>

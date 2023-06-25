@@ -72,7 +72,7 @@ function Login() {
         class=" text-black  font-bold input input-bordered w-full max-w-xs my-3 mx-8 py-2 rounded-md bg-gray-200"
       />
       <br />
-      <button class="btn bg-emerald-900 bg-opacity-40 rounded-md px-2 mx-8 my-4">Log In</button>
+      <button class="btn bg-emerald-900 bg-opacity-40 rounded-md px-2 mx-8 my-4 text-xl font-medium">Log In</button>
         {errors.length < 1 ? 
           null
           : 
