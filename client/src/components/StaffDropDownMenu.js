@@ -13,9 +13,12 @@ function StaffDropDownMenu( { staffInfo, setStaffInfo } ){
   }
 
   return (
-    <div>
+    <div >
 
-      <select className="dropdown-select" onChange={handleSelect}>
+      <select 
+        onChange={handleSelect}
+        class="text-black  font-bold input input-bordered w-full max-w-xs my-3 py-2 rounded-md bg-gray-200" 
+      >
         <option>Please select a Staff</option>
         {employeeData.map((empl) => {
           return (
