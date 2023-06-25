@@ -13,7 +13,7 @@ function MeetingCard( { meeting } ) {
   }
 
   return (
-    <div className="meetings_schedule">
+    <div>
       <div key={meeting.id}>
         {toggleEdit ? (
 
@@ -33,11 +33,11 @@ function MeetingCard( { meeting } ) {
               >✏️</button>
               <DeleteMeeting meeting={meeting} />
             </div>
-
-              <ul class="card-body">
-                <li id="staff-name" class="text-left ml-4"><b>Staff: </b>{meeting.staff_name}</li>
-                <li class="text-left ml-4"><b>Date | Time: </b>{meeting.scheduled_date}</li>
-              </ul>
+            <div class="card-body">
+              <div id="staff-name" class="text-left ml-4"><b>Staff: </b>{meeting.staff_name}</div>
+              <div class="text-left ml-4 mr-1 flow-root"><b>Description: </b>{meeting.title}</div>
+              <div class="text-left ml-4"><b>Date | Time: </b>{meeting.scheduled_date}</div>
+            </div>
             <NavLink 
               id="details"
               to={`/meetings/${meeting.id}/notes`}
