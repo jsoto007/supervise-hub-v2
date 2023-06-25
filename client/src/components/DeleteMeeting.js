@@ -20,7 +20,10 @@ function DeleteMeeting( { meeting } ) {
   }
 
   return (
-    <button className="delete-edit-btn" onClick={handleDeleteClick}>🗑️</button>
+    <button 
+      class="px-1 focus:outline-none  focus:bg-slate-300 hover:bg-slate-200 rounded-md active:bg-slate-400"  
+      onClick={handleDeleteClick}
+    >🗑️</button>
   )
 }
 

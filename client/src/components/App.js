@@ -5,6 +5,7 @@ import NavBar from './NavBar';
 import Auth from './Auth';
 import Meetings from './Meetings'
 import EmployeeMenu from './EmployeeMenu'
+import NewMeetingForm from './NewMeetingForm';
 
 function App() {
   
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route exact path="/supervisions">
           <EmployeeMenu />
+        </Route>
+        <Route exact path="/user/meetings/create">
+          <NewMeetingForm />
         </Route>
       </Switch>
     </div>

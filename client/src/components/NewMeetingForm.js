@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import StaffDropDownMenu from "./StaffDropDowmMenu";
+import StaffDropDownMenu from "./StaffDropDownMenu"
 import { DataContext } from "../context/DataContextProvider";
 import DateTimePicker from "react-datetime-picker";
 import { useHistory } from "react-router-dom";
@@ -79,7 +79,10 @@ function NewMeetingForm() {
         <br />
 
         <StaffDropDownMenu staffInfo={formData} setStaffInfo={setFormData} />
-        <button id="create-meeting-tbn" type="sumit">Add Meeting</button>
+        <button 
+          id="create-meeting-tbn" 
+          type="sumit"
+        >Add Meeting</button>
       </form>
 
 
