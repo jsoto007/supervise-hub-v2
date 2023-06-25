@@ -19,6 +19,13 @@ function App() {
       <Switch>
         <Route exact path="/">
            <Meetings />
+           {/* <div class="bg-gradient-to-bl from-emerald-900 to-slate-900 ... pb-10">
+          Completed Meetings
+          <Meetings />
+           </div>
+           <div>
+            Other
+           </div> */}
         </Route>
         <Route exact path="/supervisions">
           <EmployeeMenu />
