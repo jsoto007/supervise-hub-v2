@@ -67,83 +67,96 @@ function NotesForm() {
     <div class="mx-5 rounded-lg bg-white">
 
       <form onSubmit={handleSubmit} className="new-meeting-form ml-5">
-        <h2>Meeting Notes</h2>
 
-<label 
-  for="note1" 
-  class="block mb-2 mt-5 text-sm font-medium text-black"
->Your message</label>
-<textarea 
-  id="note1"
-  rows="4" 
-  class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3" 
-  placeholder="Write your thoughts here..."
-  value={formData.note1}
-  onChange={handleChange}
-></textarea>
+        <h3 class="mb-2 mt-2 text-3xl font-medium leading-tight text-primary"
+        >Meeting Notes</h3>
 
-
-        <input
-          type="text"
-          name="criteria1"
-          value={formData.criteria1}
+        <label 
+          for="criteria1" 
+          class="block mt-5 font-medium text-black text-lg font-mono"
+        >Topic | Criteria: </label>
+        <input 
+          type="text" 
           id="criteria1"
+          placeholder="Type here" 
+          value={formData.criteria1}
           onChange={handleChange}
-          placeholder="Criteria: Topic for this Notes"
-          className="new-notes-input"
+          class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3"
         />
-        <br/>
-        <input
-          type="text"
-          name="note1"
-          // value={formData.note1}
-          // id="note1"
+        <label 
+          for="note1" 
+          class="block mt-5 font-medium text-black text-lg font-mono"
+        >Notes One: </label>
+        <textarea 
+          id="note1"
+          rows="4" 
+          class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3" 
+          placeholder="Write your thoughts here..."
+          value={formData.note1}
           onChange={handleChange}
-          placeholder="NOTES: relevant to the criteria"
-          className="new-notes-input"
-        />
-        <br/>
-        <input
-          type="text"
-          name="criteria2"
-          value={formData.criteria2}
+        ></textarea>
+
+        <hr  class="w-3/4 mt-5"/>
+
+        <label 
+          for="criteria2" 
+          class="block mt-5 font-medium text-black text-lg font-mono"
+        >Topic | Criteria: </label>
+        <input 
+          type="text" 
           id="criteria2"
+          placeholder="Type here" 
+          value={formData.criteria2}
           onChange={handleChange}
-          placeholder="Criteria: Topic for this Notes"
-          className="new-notes-input"
+          class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3"
         />
-        <br/>
-        <input
-          type="text"
-          name="note2"
-          value={formData.note2}
+
+        <label 
+          for="note2" 
+          class="block mt-5 font-medium text-black text-lg font-mono"
+        >Notes Two: </label>
+        <textarea 
           id="note2"
+          rows="4" 
+          class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3" 
+          placeholder="Write your thoughts here..."
+          value={formData.note2}
           onChange={handleChange}
-          placeholder="NOTES: relevant to the criteria"
-          className="new-notes-input"
-        />
-        <br/>
-        <input
-          type="text"
-          name="criteria3"
-          value={formData.criteria3}
+        ></textarea>
+
+        <hr  class="w-3/4 mt-5"/>
+
+        <label 
+          for="criteria3" 
+          class="block mt-5 font-medium text-black text-lg font-mono"
+        >Topic | Criteria: </label>
+        <input 
+          type="text" 
           id="criteria3"
+          placeholder="Type here" 
+          value={formData.criteria3}
           onChange={handleChange}
-          placeholder="Criteria: Topic for this Notes"
-          className="new-notes-input"
+          class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3"
         />
-        <br/>
-        <input
-          type="text"
-          name="note3"
-          value={formData.note3}
+
+        <label 
+          for="note3" 
+          class="block mt-5 font-medium text-black text-lg font-mono"
+        >Notes Three: </label>
+        <textarea 
           id="note3"
+          rows="4" 
+          class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3" 
+          placeholder="Write your thoughts here..."
+          value={formData.note3}
           onChange={handleChange}
-          placeholder="NOTES: relevant to the criteria"
-          className="new-notes-input"
-        />
-        <br/>
-        <button id="create-notes-tbn" type="submit"> Add Notes </button>
+        ></textarea>
+
+        <button 
+          type="submit" 
+          class="shadow-slate-600 text-white bg-gradient-to-r from-slate-900 to-slate-700
+          hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg dark:shadow-lg font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-8 mt-2"
+        >Add Notes</button>
       </form>
     </div>
   )
