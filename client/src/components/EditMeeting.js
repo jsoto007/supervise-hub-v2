@@ -89,9 +89,11 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
             })}
           </ul>
         }
-      <button 
-          type="sumit"
-          class="my-2 px-1 focus:outline-none  focus:bg-slate-300 hover:bg-slate-500 rounded-md active:bg-slate-600 bg-slate-400"
+
+        <button 
+          type="submit" 
+          class="shadow-slate-600 text-white bg-gradient-to-r from-slate-900 to-slate-700
+          hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg dark:shadow-lg font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-2 mb-4 mt-4"
         >Submit Changes</button>
       </form>
 
