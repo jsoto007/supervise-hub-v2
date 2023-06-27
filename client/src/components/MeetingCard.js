@@ -13,7 +13,7 @@ function MeetingCard( { meeting } ) {
   }
 
   return (
-    <div class="mb-6">
+    <div class="h-auto max-w-full rounded-lg">
       <div key={meeting.id}>
         {toggleEdit ? (
 
@@ -45,11 +45,12 @@ function MeetingCard( { meeting } ) {
               to={`/meetings/${meeting.id}/notes`}
             >
             <br />
+          
             <button 
-              id="add-notes-btn"
-              class="mx-2 px-1 focus:outline-none  focus:bg-slate-300 hover:bg-slate-200 rounded-md active:bg-slate-400 bg-slate-100 shadow-md mb-1" 
-
-            ><spam class="text-bold text-md">&#43;</spam> Notes to Meeting</button>
+              type="submit" 
+              class="shadow-slate-400 text-white bg-gradient-to-r from-slate-700 to-slate-500
+              hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-600 shadow-lg dark:shadow-lg font-medium rounded-lg text-sm px-5 py-1 text-center mr-2 mb-8 mt-2"
+            ><spam class="text-bold text-md">&#43;</spam> Add Notes</button>
             </NavLink>
 
           </div>
