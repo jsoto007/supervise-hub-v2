@@ -81,7 +81,7 @@ function NotesForm() {
           placeholder="Type here" 
           value={formData.criteria1}
           onChange={handleChange}
-          class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3"
+          class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1"
         />
         <label 
           for="note1" 
@@ -90,7 +90,7 @@ function NotesForm() {
         <textarea 
           id="note1"
           rows="4" 
-          class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3" 
+          class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1" 
           placeholder="Write your thoughts here..."
           value={formData.note1}
           onChange={handleChange}
@@ -108,7 +108,7 @@ function NotesForm() {
           placeholder="Type here" 
           value={formData.criteria2}
           onChange={handleChange}
-          class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3"
+          class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1"
         />
 
         <label 
@@ -118,7 +118,7 @@ function NotesForm() {
         <textarea 
           id="note2"
           rows="4" 
-          class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3" 
+          class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1 mb-2" 
           placeholder="Write your thoughts here..."
           value={formData.note2}
           onChange={handleChange}
@@ -136,7 +136,7 @@ function NotesForm() {
           placeholder="Type here" 
           value={formData.criteria3}
           onChange={handleChange}
-          class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3"
+          class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1"
         />
 
         <label 
@@ -146,7 +146,7 @@ function NotesForm() {
         <textarea 
           id="note3"
           rows="4" 
-          class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3" 
+          class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1 mb-2" 
           placeholder="Write your thoughts here..."
           value={formData.note3}
           onChange={handleChange}
