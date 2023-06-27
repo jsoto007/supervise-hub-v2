@@ -47,7 +47,7 @@ function MeetingCard( { meeting } ) {
             <br />
             <button 
               id="add-notes-btn"
-              class="mx-2 px-1 focus:outline-none  focus:bg-slate-300 hover:bg-slate-200 rounded-md active:bg-slate-400 bg-slate-100" 
+              class="mx-2 px-1 focus:outline-none  focus:bg-slate-300 hover:bg-slate-200 rounded-md active:bg-slate-400 bg-slate-100 shadow-md mb-1" 
 
             ><spam class="text-bold text-md">&#43;</spam> Notes to Meeting</button>
             </NavLink>

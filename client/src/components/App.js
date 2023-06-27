@@ -6,6 +6,7 @@ import Auth from './Auth';
 import Meetings from './Meetings'
 import EmployeeMenu from './EmployeeMenu'
 import NewMeetingForm from './NewMeetingForm';
+import NotesForm from './NotesForm';
 
 function App() {
   
@@ -19,13 +20,9 @@ function App() {
       <Switch>
         <Route exact path="/">
            <Meetings />
-           {/* <div class="bg-gradient-to-bl from-emerald-900 to-slate-900 ... pb-10">
-          Completed Meetings
-          <Meetings />
-           </div>
-           <div>
-            Other
-           </div> */}
+        </Route>
+        <Route exact path="/meetings/:id/notes">
+          <NotesForm />
         </Route>
         <Route exact path="/supervisions">
           <EmployeeMenu />

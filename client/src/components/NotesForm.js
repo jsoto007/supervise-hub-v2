@@ -64,9 +64,25 @@ function NotesForm() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="new-meeting-form">
+    <div class="mx-5 rounded-lg bg-white">
+
+      <form onSubmit={handleSubmit} className="new-meeting-form ml-5">
         <h2>Meeting Notes</h2>
+
+<label 
+  for="note1" 
+  class="block mb-2 mt-5 text-sm font-medium text-black"
+>Your message</label>
+<textarea 
+  id="note1"
+  rows="4" 
+  class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-3" 
+  placeholder="Write your thoughts here..."
+  value={formData.note1}
+  onChange={handleChange}
+></textarea>
+
+
         <input
           type="text"
           name="criteria1"
@@ -80,8 +96,8 @@ function NotesForm() {
         <input
           type="text"
           name="note1"
-          value={formData.note1}
-          id="note1"
+          // value={formData.note1}
+          // id="note1"
           onChange={handleChange}
           placeholder="NOTES: relevant to the criteria"
           className="new-notes-input"
