@@ -13,7 +13,6 @@ function UserContextProvider( { children } ) {
       if (resp.ok){
         resp.json().then(user => {
           setCurrentUser(user)
-          console.log(user)
           window.localStorage.setItem("isLoggedIn", true)
         })
       }

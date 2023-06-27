@@ -3,6 +3,7 @@ import StaffDropDownMenu from "./StaffDropDownMenu"
 import { DataContext } from "../context/DataContextProvider";
 import DateTimePicker from "react-datetime-picker";
 import { useHistory } from "react-router-dom";
+import moment from "moment";
 
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
@@ -12,17 +13,19 @@ function NewMeetingForm() {
 
   const {meetingData, setMeetingData} = useContext(DataContext)
 
-  const [dateTime, setDateTime] = useState(new Date());
+  const [dateTime, setDateTime] = useState([]);
 
   const [respErrors, setRespErrors] = useState([])
 
   const history = useHistory();
 
+  const updatedDate = moment(dateTime).toISOString()
+
   const [formData, setFormData] = useState({
     title: "", 
     completed: false, 
     employee_id: "",
-    scheduled_date: `${dateTime}` 
+    scheduled_date: `${updatedDate}`
   })
 
   async function handleSubmit(e) {
@@ -84,7 +87,7 @@ function NewMeetingForm() {
         <button 
           id="create-meeting-tbn" 
           type="sumit"
-          class="mx-2 px-1 focus:outline-none  focus:bg-slate-300 hover:bg-slate-500 rounded-md active:bg-slate-600 bg-slate-400"
+          class=" px-1 focus:outline-none  focus:bg-slate-300 hover:bg-slate-500 rounded-md active:bg-slate-600 bg-slate-400"
         >Add Meeting</button>
       </form>
     </div>

@@ -16,3 +16,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.react-datetime-picker__wrapper {
+  border-radius: 8px;
+  padding: 3px;
+}

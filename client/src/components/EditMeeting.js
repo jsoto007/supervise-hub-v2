@@ -1,18 +1,28 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { DataContext } from "../context/DataContextProvider";
+import DateTimePicker from "react-datetime-picker";
+import moment, { updateLocale } from "moment/moment";
 
 function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
 
   const {meetingData, setMeetingData} = useContext(DataContext)
 
-  const { id, title, scheduled_date, staff_name} = meeting;
+  const { id, title, staff_name} = meeting;
   
   const [errors, setErrors] = useState([])
-  
+
+  const [value, onChange] = useState();
+
+  const [newDateTime, setNewDateTime] = useState();
+
+  const updatedInString = moment(value).toISOString();
+
   const [patchedMeeting, setPatchedMeeting] = useState({
+    scheduled_date: `${updatedInString}`,
     title: `${title}`,
-    scheduled_date: `${scheduled_date}`
   })
+
+  console.log("outside", updatedInString)
 
   function handleEditMeeting(data) {
     const updatedMeetings = meetingData.filter((meet) => meet.id !== meeting.id);
@@ -34,12 +44,12 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
     const data = await response.json();
       if(response.ok){
         handleEditMeeting(data)
+        setToggleEdit((toggleEdit) => !toggleEdit)
       }else {
         setErrors(data)
       }
-
-      setToggleEdit((toggleEdit) => !toggleEdit)
-  }
+      
+    }
 
 
   function handleChange(e) {
@@ -50,36 +60,39 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
     })
   }
 
-  console.log(errors)
 
   return (
-    <div>
+    <div class="card w-96 bg-base-100 shadow-xl bg-white mx-3 rounded-xl text-center pt-3 pb-2">
 
-      <form onSubmit={handlePatchSubmit}>
+      <form onSubmit={handlePatchSubmit} class="text-left ml-4">
+        <h5 class="mb-3"><b>Staff: </b>{staff_name}</h5>
+        <label class="mt-2" for="title"><b>Description | Title: </b></label>
         <input
           type="text"
           name="title"
           value={patchedMeeting.title}
           id="title"
           onChange={handleChange}
+          class="text-black input input-bordered w-full max-w-xs py-2 rounded-md bg-gray-200"
         />
         <br />
-        <label for="scheduled_date">{staff_name} | </label>
-        <input
-          type="text"
-          name="scheduled_date"
-          value={patchedMeeting.scheduled_date}
-          id="scheduled_date"
-          onChange={handleChange}
-        />
-         {errors.length > 0 && (
-          <ul className='error-messages'>
-            {errors.map((error) => (
-              <li key={error}>{error}</li>
-            ))}
+        <h5 class="mt-3"><b>Date | Time: </b></h5>
+        <DateTimePicker onChange={(newValue) => onChange(newValue)} value={value} />
+           {errors.length < 1 ? 
+          null
+          : 
+          <ul class="bg-red-300 my-1 rounded-lg p-2" key={errors}>
+            {errors.errors.map((error) => {
+              return (
+                <li class="mx-5">ⓧ  {error}</li>
+              )
+            })}
           </ul>
-         )}
-      <button type="submit">Submit</button>
+        }
+      <button 
+          type="sumit"
+          class="my-2 px-1 focus:outline-none  focus:bg-slate-300 hover:bg-slate-500 rounded-md active:bg-slate-600 bg-slate-400"
+        >Submit Changes</button>
       </form>
 
 
