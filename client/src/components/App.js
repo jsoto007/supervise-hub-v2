@@ -22,17 +22,16 @@ function App() {
       <Switch>
         <Route exact path="/">
            <Meetings />
-           <UserMeetings />
         </Route>
         <Route exact path="/meetings/:id/notes">
           <NotesForm />
         </Route>
-        <Route exact path="/supervisions">
+        {/* <Route exact path="/supervisions">
           <EmployeeMenu />
         </Route>
         <Route exact path="/supervisions/:id">
           <CompletedMeetingsContainer />
-        </Route>
+        </Route> */}
         <Route exact path="/user/meetings/create">
           <NewMeetingForm />
         </Route>

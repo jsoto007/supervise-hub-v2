@@ -19,7 +19,7 @@ function NavBar() {
           Home
           </button>
         </NavLink>
-        <NavLink
+        {/* <NavLink
         to="/supervisions"
         exact
         >
@@ -27,7 +27,7 @@ function NavBar() {
           Supervisions
           </button>
           
-        </NavLink>
+        </NavLink> */}
         <NavLink
         to="/user/meetings"
         exact
