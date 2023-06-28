@@ -8,6 +8,7 @@ import EmployeeMenu from './EmployeeMenu'
 import NewMeetingForm from './NewMeetingForm';
 import NotesForm from './NotesForm';
 import UserMeetings from './UserMeetings';
+import CompletedMeetingsContainer from './CompletedMeetingsContainer'
 
 function App() {
   
@@ -21,12 +22,16 @@ function App() {
       <Switch>
         <Route exact path="/">
            <Meetings />
+           <UserMeetings />
         </Route>
         <Route exact path="/meetings/:id/notes">
           <NotesForm />
         </Route>
         <Route exact path="/supervisions">
           <EmployeeMenu />
+        </Route>
+        <Route exact path="/supervisions/:id">
+          <CompletedMeetingsContainer />
         </Route>
         <Route exact path="/user/meetings/create">
           <NewMeetingForm />

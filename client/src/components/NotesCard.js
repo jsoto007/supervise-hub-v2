@@ -26,13 +26,13 @@ function NotesCard( { notesData } ) {
           {notes.map((note) => {
             return (
               <ul key={note.id}>
-                <li><b> Subject | </b>{note.note1}</li>
+                <li><b> Topic | </b>{note.note1}</li>
                 <li><b> Notes | </b>{note.criteria1}</li>
                 <br />
-                <li><b> Subject | </b>{note.note2}</li>
+                <li><b> Topic | </b>{note.note2}</li>
                 <li><b> Notes | </b>{note.criteria2}</li>
                 <br />
-                <li><b> Subject | </b>{note.note3}</li>
+                <li><b> Topic | </b>{note.note3}</li>
                 <li><b> Notes | </b>{note.criteria3}</li>
               </ul>
             )
