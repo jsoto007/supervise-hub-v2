@@ -13,7 +13,7 @@ function Auth() {
   }
 
   return (
-    <div class="flex ... drop-shadow-xl mt-20">
+    <div class="flex ... drop-shadow-xl mt-20 ... max-w-screen-xl mx-auto">
         <div class="flex-1 ...">
           <img
                 id="app-logo"

@@ -17,7 +17,7 @@ function App() {
   if (userLogedIn === null) return <Auth />
   
   return (
-    <div>
+    <div class="max-w-screen-2xl mx-auto">
       <NavBar />
       <Switch>
         <Route exact path="/">
