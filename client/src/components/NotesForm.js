@@ -72,83 +72,83 @@ function NotesForm() {
         >Meeting Notes</h3>
 
         <label 
-          for="criteria1" 
+          for="note1" 
           class="block mt-5 font-medium text-black text-lg font-mono"
         >Topic | Criteria: </label>
         <input 
           type="text" 
-          id="criteria1"
+          id="note1"
           placeholder="Type here" 
-          value={formData.criteria1}
+          value={formData.note1}
           onChange={handleChange}
           class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1"
         />
         <label 
-          for="note1" 
+          for="criteria1" 
           class="block mt-5 font-medium text-black text-lg font-mono"
         >Notes One: </label>
         <textarea 
-          id="note1"
+          id="criteria1"
           rows="4" 
           class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1" 
           placeholder="Write your thoughts here..."
-          value={formData.note1}
+          value={formData.criteria1}
           onChange={handleChange}
         ></textarea>
 
         <hr  class="w-3/4 mt-5"/>
-
-        <label 
-          for="criteria2" 
-          class="block mt-5 font-medium text-black text-lg font-mono"
-        >Topic | Criteria: </label>
-        <input 
-          type="text" 
-          id="criteria2"
-          placeholder="Type here" 
-          value={formData.criteria2}
-          onChange={handleChange}
-          class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1"
-        />
 
         <label 
           for="note2" 
           class="block mt-5 font-medium text-black text-lg font-mono"
+        >Topic | Criteria: </label>
+        <input 
+          type="text" 
+          id="note2"
+          placeholder="Type here" 
+          value={formData.note2}
+          onChange={handleChange}
+          class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1"
+        />
+
+        <label 
+          for="criteria2" 
+          class="block mt-5 font-medium text-black text-lg font-mono"
         >Notes Two: </label>
         <textarea 
-          id="note2"
+          id="criteria2"
           rows="4" 
           class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1 mb-2" 
           placeholder="Write your thoughts here..."
-          value={formData.note2}
+          value={formData.criteria2}
           onChange={handleChange}
         ></textarea>
 
         <hr  class="w-3/4 mt-5"/>
 
         <label 
-          for="criteria3" 
+          for="note3" 
           class="block mt-5 font-medium text-black text-lg font-mono"
         >Topic | Criteria: </label>
         <input 
           type="text" 
-          id="criteria3"
+          id="note3"
           placeholder="Type here" 
-          value={formData.criteria3}
+          value={formData.note3}
           onChange={handleChange}
           class="block p-1.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1"
         />
 
         <label 
-          for="note3" 
+          for="criteria3" 
           class="block mt-5 font-medium text-black text-lg font-mono"
         >Notes Three: </label>
         <textarea 
-          id="note3"
+          id="criteria3"
           rows="4" 
           class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-serif shadow-lg my-1 mb-2" 
           placeholder="Write your thoughts here..."
-          value={formData.note3}
+          value={formData.criteria3}
           onChange={handleChange}
         ></textarea>
 
