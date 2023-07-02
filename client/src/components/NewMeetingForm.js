@@ -64,8 +64,6 @@ function NewMeetingForm() {
     })
   }
 
-  console.log(errors)
-
   return (
     <div class="grid place-items-center bg-white mx-20 p-8 rounded-lg ">
       <form onSubmit={handleSubmit} className="new-meeting-form">
@@ -96,14 +94,16 @@ function NewMeetingForm() {
          {errors.length < 1 ? 
           null
           : 
-          <ul class="bg-red-400 mx-2 my-1 rounded-lg p-2" key={errors.login}>
+
+          <div>
             {errors.errors.map((error) => {
               return (
-
-                <li class="mx-5 my-1">ⓧ  {error}</li>
+                <ul class="bg-red-300 mx-1 my-2 rounded-lg p-2" key={errors.login}>
+                  <li class="mx-5 my-1">ⓧ  {error}</li>
+                </ul>
               )
             })}
-          </ul>
+          </div>
         }
       </form>
     </div>
