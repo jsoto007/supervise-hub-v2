@@ -89,7 +89,7 @@ function Signup() {
             {errors.map((error) => (
               <ul
                 key={error}
-                class="bg-red-400 mx-2 my-1 rounded-lg p-2"
+                class="bg-red-300 mx-2 my-1 rounded-lg p-2"
               >
                 <li class="mx-5">ⓧ  {error}</li>
               </ul>

@@ -76,7 +76,7 @@ function Login() {
         {errors.length < 1 ? 
           null
           : 
-          <ul class="bg-red-400 mx-2 my-1 rounded-lg p-2" key={errors.login}>
+          <ul class="bg-red-300 mx-2 my-1 rounded-lg p-2" key={errors.login}>
           <li class="mx-5">ⓧ  {errors.login}</li>
           </ul>
         }
