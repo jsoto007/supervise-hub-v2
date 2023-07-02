@@ -43,7 +43,8 @@ function NewMeetingForm() {
       handleAddMeeting(newMeeting)
       history.push("/")
     }else {
-      setErrors(data.error)
+      setErrors(newMeeting)
+      console.log("resp", newMeeting.errors)
     }
 
   }
@@ -62,6 +63,8 @@ function NewMeetingForm() {
       [key]: e.target.value
     })
   }
+
+  console.log(errors)
 
   return (
     <div class="grid place-items-center bg-white mx-20 p-8 rounded-lg ">
@@ -94,7 +97,12 @@ function NewMeetingForm() {
           null
           : 
           <ul class="bg-red-400 mx-2 my-1 rounded-lg p-2" key={errors.login}>
-          <li class="mx-5">ⓧ  {errors.login}</li>
+            {errors.errors.map((error) => {
+              return (
+
+                <li class="mx-5 my-1">ⓧ  {error}</li>
+              )
+            })}
           </ul>
         }
       </form>
