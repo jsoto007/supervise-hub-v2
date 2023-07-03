@@ -34,8 +34,6 @@ class MeetingsController < ApplicationController
     meeting.destroy
   end
 
-
-
   private
 
   def find_user
