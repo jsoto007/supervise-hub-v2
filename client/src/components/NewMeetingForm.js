@@ -5,6 +5,7 @@ import DateTimePicker from "react-datetime-picker";
 import { useHistory } from "react-router-dom";
 import moment from "moment";
 
+
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
 import 'react-clock/dist/Clock.css';
@@ -13,30 +14,31 @@ function NewMeetingForm() {
 
   const {meetingData, setMeetingData} = useContext(DataContext)
 
-  const [dateTime, setDateTime] = useState([]);
+  const [date, setDate] = useState([]);
 
   const [errors, setErrors] = useState([])
 
   const history = useHistory();
 
-  const updatedDate = moment(dateTime).toISOString()
+
 
   const [formData, setFormData] = useState({
     title: "", 
     completed: false, 
     employee_id: "",
-    scheduled_date: `${updatedDate}`
+    scheduled_date: "",
   })
 
   async function handleSubmit(e) {
 
     e.preventDefault();
-
     const response = await fetch(`/meetings`, {
       method: "POST", 
       headers: {'Content-Type': 'application/json'},
       body:JSON.stringify(formData)
     });
+
+    
 
     const newMeeting = await response.json();
     if (response.ok) {
@@ -44,7 +46,6 @@ function NewMeetingForm() {
       history.push("/")
     }else {
       setErrors(newMeeting)
-      console.log("resp", newMeeting.errors)
     }
 
   }
@@ -77,12 +78,18 @@ function NewMeetingForm() {
           placeholder="Title: Meeting Description"
           class="text-black  font-bold input input-bordered w-full max-w-xs mt-3 py-2 rounded-md bg-gray-200"
         />
-        <div class="form-control">
-</div>
         <br/>
-     
-        <DateTimePicker onChange={setDateTime} value={dateTime} />
-        <br />
+        <span class="text-md font-semibold inline-block py-1 px-2 mr-1 mt-2">
+        Please Select The Date & Time:
+      </span>
+
+      <input type="datetime-local" 
+        id="scheduled_date"
+        name="meeting-time" 
+        value={formData.scheduled_date}
+        onChange={handleChange}
+        class="text-black  font-bold input input-bordered w-full max-w-xs mt-1 mb-3 py-2 pr-2 rounded-md bg-gray-200"
+      ></input>
 
         <StaffDropDownMenu staffInfo={formData} setStaffInfo={setFormData} />
      
