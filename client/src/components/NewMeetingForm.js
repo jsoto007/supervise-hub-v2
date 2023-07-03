@@ -47,13 +47,10 @@ function NewMeetingForm() {
     }else {
       setErrors(newMeeting)
     }
-
   }
 
   function handleAddMeeting(newMeeting) {
     setMeetingData([newMeeting, ...meetingData])
-
-
   }
 
 

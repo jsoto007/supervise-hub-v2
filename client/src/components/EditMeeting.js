@@ -1,28 +1,18 @@
 import React, { useState, useContext, useEffect } from "react";
 import { DataContext } from "../context/DataContextProvider";
-import DateTimePicker from "react-datetime-picker";
-import moment, { updateLocale } from "moment/moment";
 
 function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
 
   const {meetingData, setMeetingData} = useContext(DataContext)
 
-  const { id, title, staff_name} = meeting;
+  const { id, title, staff_name, scheduled_date} = meeting;
   
   const [errors, setErrors] = useState([])
 
-  const [value, onChange] = useState();
-
-  const [newDateTime, setNewDateTime] = useState();
-
-  const updatedInString = moment(value).toISOString();
-
   const [patchedMeeting, setPatchedMeeting] = useState({
-    scheduled_date: `${updatedInString}`,
+    scheduled_date: "",
     title: `${title}`,
   })
-
-  console.log("outside", updatedInString)
 
   function handleEditMeeting(data) {
     const updatedMeetings = meetingData.filter((meet) => meet.id !== meeting.id);
@@ -77,17 +67,29 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
         />
         <br />
         <h5 class="mt-3"><b>Date | Time: </b></h5>
-        <DateTimePicker onChange={(newValue) => onChange(newValue)} value={value} />
+
+        <input type="datetime-local" 
+        id="scheduled_date"
+        name="meeting-time" 
+        value={patchedMeeting.scheduled_date}
+        onChange={handleChange}
+        class="text-black  font-bold input input-bordered w-full max-w-xs mt-1 mb-3 py-2 pr-2 rounded-md bg-gray-200"
+      ></input>
+
+        <input DateTimePicker />
+
            {errors.length < 1 ? 
           null
           : 
-          <ul class="bg-red-300 my-1 rounded-lg p-2" key={errors}>
+          <div  key={errors}>
             {errors.errors.map((error) => {
               return (
-                <li class="mx-5">ⓧ  {error}</li>
+                <ul class="bg-red-300 my-1 rounded-lg p-2 mr-2">
+                <li class="mx-3">ⓧ  {error}</li>
+                </ul>
               )
             })}
-          </ul>
+          </div>
         }
 
         <button 
@@ -96,7 +98,6 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
           hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg dark:shadow-lg font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-2 mb-4 mt-4"
         >Submit Changes</button>
       </form>
-
 
     </div>
   )
