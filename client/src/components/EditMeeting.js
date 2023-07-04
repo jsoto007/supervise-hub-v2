@@ -94,7 +94,7 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
 
         <button 
           type="submit" 
-          class="shadow-slate-600 text-white bg-gradient-to-r from-slate-900 to-slate-700
+          class="shadow-slate-500 text-white bg-gradient-to-r from-slate-800 to-slate-600
           hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg dark:shadow-lg font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-2 mb-4 mt-4"
         >Submit Changes</button>
       </form>
