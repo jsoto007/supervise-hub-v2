@@ -5,7 +5,7 @@ function EditMeeting( { meeting, setToggleEdit, toggleEdit } ) {
 
   const {meetingData, setMeetingData} = useContext(DataContext)
 
-  const { id, title, staff_name, scheduled_date} = meeting;
+  const { id, title, staff_name} = meeting;
   
   const [errors, setErrors] = useState([])
 
