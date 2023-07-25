@@ -4,16 +4,15 @@ import { Route, Switch } from "react-router-dom"
 import NavBar from './NavBar';
 import Auth from './Auth';
 import Meetings from './Meetings'
-import EmployeeMenu from './EmployeeMenu'
 import NewMeetingForm from './NewMeetingForm';
 import NotesForm from './NotesForm';
 import UserMeetings from './UserMeetings';
-import CompletedMeetingsContainer from './CompletedMeetingsContainer'
 
 function App() {
   
   const userLogedIn = window.localStorage.getItem("isLoggedIn")
 
+  
   if (userLogedIn === null) return <Auth />
   
   return (
