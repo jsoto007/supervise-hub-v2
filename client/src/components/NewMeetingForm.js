@@ -98,7 +98,6 @@ function NewMeetingForm() {
          {errors.length < 1 ? 
           null
           : 
-
           <div>
             {errors.errors.map((error) => {
               return (

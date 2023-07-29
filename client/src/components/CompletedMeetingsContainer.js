@@ -7,13 +7,11 @@ function CompletedMeetingsContainer() {
   return (
     <div>
       <div className="menu-container">
-        
-      <EmployeeMenu />
+        <EmployeeMenu />
       </div>
-
       <div className="meetings-container">
         <h2>Employees Meetings</h2>
-      <EmployeeMeetings />
+        <EmployeeMeetings />
       </div>
     </div>
   )

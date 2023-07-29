@@ -19,15 +19,6 @@ function NavBar() {
           Home
           </button>
         </NavLink>
-        {/* <NavLink
-        to="/supervisions"
-        exact
-        >
-          <button class=" focus:outline-none  focus:bg-slate-300 mx-3 hover:bg-slate-200 rounded-md active:bg-slate-400 px-1">
-          Supervisions
-          </button>
-          
-        </NavLink> */}
         <NavLink
         to="/user/meetings"
         exact

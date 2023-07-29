@@ -13,7 +13,7 @@ function EmployeeCard( { employeeInfo } ) {
           className="nav-link"
           to={`/supervisions/${id}`}
         >
-        {name}
+          {name}
         </NavLink>
       </div>
   )

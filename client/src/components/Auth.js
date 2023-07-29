@@ -16,10 +16,10 @@ function Auth() {
     <div class="flex ... drop-shadow-xl mt-20 ... max-w-screen-xl mx-auto">
         <div class="flex-1 ...">
           <img
-                id="app-logo"
-                src={pageLogo}
-                alt="Expense Tacker"
-                class="rounded-2xl ml-2 mr-5"
+            id="app-logo"
+            src={pageLogo}
+            alt="Expense Tacker"
+            class="rounded-2xl ml-2 mr-5"
           />
       <ul class="text-center text-2xl font-serif font-medium">
         <li class="my-3 mt-4">Help your employees develop their roles through open communication</li>

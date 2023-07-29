@@ -35,9 +35,7 @@ function MeetingCard( { meeting } ) {
             </div>
             <div>
               <div id="staff-name" class="text-left ml-4"><b>Staff: </b>{meeting.staff_name}</div>
-
               <div class="text-left ml-4 mr-1 flow-root"><b>Description: </b>{meeting.title}</div>
-              
               <div class="text-left ml-4"><b>Date | Time: </b>{meeting.formated_date}</div>
             </div>
             <NavLink 
