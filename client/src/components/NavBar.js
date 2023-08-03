@@ -40,7 +40,7 @@ function NavBar() {
         onClick={handleLogout}
         class=" focus:outline-none  focus:bg-slate-300 mx-5 hover:bg-slate-200 rounded-md active:bg-slate-400 px-1 float-right">
           Logout
-          </button>
+        </button>
       </nav>
 
     </div>
